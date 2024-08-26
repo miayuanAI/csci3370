@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSCI 3399: Spring 2024</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../shared/main.css">
+	<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script>
+
+</head>
+	<body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+    <style>
+        
+  a {
+      color: #535353;
+  }
+  a.nounderline { 
+      text-decoration: none;
+      decoration: none;
+		  border-bottom: none; 
+  }
+    </style>
+    
+      <div id="wrapper">
+        <header id="header" class="alt" style="width: 100%">
+          <div class="bgimg" style="height: 160px; background: #5DAC81">
+            <div style="height: 30px; width: 100%"></div>
+            <h1><font size="+5">CSCI 3399: Vision and Learning -- Intro to Deep Learning</font><div style="height:10px"></div>
+              </h1><h2>
+                <font size="+2">
+                  Instructor:&nbsp;&nbsp;<a href="https://yyuanad.github.io/" class="nounderline">Yuan Yuan</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Spring 2024 (MWF 9:00-9:50 AM)  
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.bc.edu/content/bc-web/restricted/student-services/faculty-staff/classroom-profiles/FultonHall/Fulton415.html" target="_blank">Fulton Hall 415</a>
+                </font>
+              </h2>
+          </div>
+				</header>
+
+        <center>
+          <div style="background: #EEEEEE; height: 7px"></div>
+        </center>
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul>							
+                    <li><a href="#overview" class="inheritcolor">Overview</a></li> <b>·</b>
+                    <li><a href="#staff" class="inheritcolor">Staff</a></li> <b>·</b>
+                    <li><a href="#schedule" class="inheritactive">Schedule</a></li> <b>·</b>
+                    <li><a href="#info" class="inheritcolor">Course info</a></li> <b>·</b>
+                    <li><a href="https://bostoncollege.instructure.com/courses/1657395" class="inheritcolor" target="_blank">Canvas</a></li> 
+                    <!-- <b>·</b> -->
+                    <!-- <li><a href="https://docs.google.com/document/d/1VWzy8Tkhs2QaKBJp37i4wnV9xQXjJttXMUh3TajgxGc/edit?usp=sharing" class="inheritcolor">Discord</a></li> -->
+                </ul>
+            </nav>
+
+
+
+
+
+
+        <!-- Main -->
+            <div id="main">
+            <section id="note" class="main special">
+
+         <!-- Introduction -->
+            <section id="overview" class="main">
+              <center>
+                <header class="major">
+                  <h2>Overview</h2>
+				</header>
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+                    <p>
+
+                    Over the past few years, Deep Learning has become ubiquitous in our society, with applications spanning search, image understanding, apps, mapping, medicine, drones, self-driving cars, robotics, and art. At the core of many of these applications are visual recognition tasks, such as image classification and object detection. Recent developments in neural network approaches have significantly enhanced the performance of these state-of-the-art visual recognition systems. 
+
+
+                    In the realm of learning algorithms, beyond supervised learning, self-supervised learning has gained widespread use in recent years, particularly in vision and language modeling. This approach enables the extraction of labels for free from unlabeled data, allowing for the training of an unsupervised dataset in a supervised manner. 
+
+
+                    During this course, students will gain foundational knowledge of deep learning algorithms and neural network architectures, as well as practical experience in building, training, and fine-tuning neural networks. They will also gain an understanding of cutting-edge research topics in areas such as vision, language, medicine, generative AI, robotics, and more.
+
+                    <div style="padding-left: 4%; margin-top: -30px">
+                    <!-- <div style="padding-left: 4%; margin-top: -30px"> -->
+                    <ul>
+                        <li><b>Prerequisites:</b> 
+                          <!-- <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">Linear Algebra (Essence, Chap 1-4)</a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</a>, and <a href="https://cs231n.github.io/python-numpy-tutorial/">Python (Basics)</a></li> -->
+
+
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li>Programming: You should be familiar with algorithms and data structures. Familiarity with python or similar frameworks for numeric programming will be helpful but is not strictly required. <a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank" style="color: #2EA9DF;"><i>Python (Basics)</i></a>.</li>
+
+
+                                    <li>Probability: You should have been exposed to probability distributions, random variables, expectations, etc. <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B" target="_blank" style="color: #2EA9DF;"><i>Linear Algebra (Essence, Chap 1-4)</i></a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank" style="color: #2EA9DF;"><i>Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</i></a>. </li>
+
+
+                                    <li>Machine Learning: Some familiarity with machine learning will be helpful but not required; we will review important concepts that are needed for this course.</li>
+                                </ul>
+
+                        
+
+
+                        <!-- <li><b>Lecture format</b>: 80% PPT, 10% think-pair-share, 10% live coding.</li> -->
+                        <li><b>Lecture:</b><br>
+                          Lectures will be Monday, Wednesday, and Friday at Fulton Hall 415, from 9:00am to 9:50am. 
+                        <li><b>Textbooks and Materials:</b> <br>
+                          There is no required textbook for the course. However, the following books (available for free online) can be useful as references on relevant topics:
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li><a href="https://www.deeplearningbook.org/" target="_blank" style="color: #2EA9DF;"><i>Deep Learning (DL)</i></a>, Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron, MIT Press, 2016, ISBN: 9780262035613 </li>
+                                    <li><a href="https://d2l.ai/" target="_blank" style="color: #2EA9DF;"><i>Dive into Deep Learning (D2L)</i></a>, Zhang et al.</li>
+                                    <li><a href="https://szeliski.org/Book/" target="_blank" style="color: #2EA9DF;"><i>Computer Vision: Algorithms and Applications 2nd Edition (CV)</i></a>, Richard Szeliski.</li>
+                                    <li><a href="https://github.com/peteflorence/MachineLearning6.867/blob/master/Bishop/Bishop%20-%20Pattern%20Recognition%20and%20Machine%20Learning.pdf" target="_blank" style="color: #2EA9DF;"><i>Pattern Recognition and Machine Learning (PRML)</i></a>, Christopher C. Bishop, Springer, 2006, ISBN: 9780387310732 </li>
+                                </ul>
+                                You may also find this tutorial <a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank" style="color: #2EA9DF;"><i>Deep Learning with PyTorch: A 60 Minute Blitz</i></a> helpful.
+                         </li>
+                         <li><b>Grading Policy:</b> <br>
+
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li>No quizzes/exams.</li>
+                                    <li>10%: Attendance (Including Asking Questions)</li>
+                                    <li>60%: Homework Assigenments (10%*6)</li>
+                                    <li>30%: Final Project (Proposal, Presentation, and Report)</li>
+                                </ul>
+
+                        
+             <!--              No quizzes/exams. <br>
+                          10%: Attendance (Including Asking Questions)
+                          60%: Homework Assigenments (10%*6)
+                          30%: Final Project (Proposal, Presentation, and Report) -->
+
+                          You will complete six programming assignments over the course of the semester. All homework assignments will be in Python, and will use <a href="https://pytorch.org/" target="_blank" style="color: #2EA9DF;"><i>PyTorch</i></a> on Google Colab. <br>
+
+                          Instead of a final exam, at the end of the semester you will complete a project working in groups of at most 3 students. 
+                          <!-- The homework assignments walk you through implementing things with extensive starter code; in contrast the project will not provide any starter code whatsoever, leaving you to implement an entire deep learning pipeline from scratch. -->
+
+                          <!-- 10 labs (35%) + 5 psets (35%) + 1 final project (30%). <a href="https://drive.google.com/drive/folders/1LQR9ZyZ7EtOMsvpB1bPRARBVgwQW3OWW">[folder of assignments]</a> </li> -->
+                    </ul>
+                    </div>
+                    </p>         
+                    </div>
+                </div>
+                </center>
+            </section>
+
+
+
+            <!-- Staff -->
+           <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Staff</h2>
+                </header>
+                  <!-- <br> -->
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <div class="staff">
+                            <div><img src="../shared/Yuan.jpg" class="staff"></div>
+                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Yuan Yuan</a></b></div>
+                            <div>Instructor</div>
+                          </div>
+                        </td>                        
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/gavin.jpg" class="staff"></div>
+                            <div><b><a href="https://ritengzhang.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Gavin</a></b></div>
+                            <div>Teaching Assistant</div>
+                          </div>
+                        </td>
+                       
+                      </tr>
+                    </tbody></table>
+
+
+                </div>
+              </center>
+            </section>
+
+
+      <!-- Guest Speaker -->
+            <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Guest Speakers</h2>
+                </header>
+                  <!-- <br> -->
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/ChunyuanLi.jpg" class="staff"></div>
+                            <div><b><a href="https://chunyuan.li/" class="stafflink" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a></b></div>
+                            <div>Microsoft Research</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/TianhongLi.jpg" class="staff"></div>
+                            <div><b><a href="https://www.tianhongli.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Tianhong Li</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GeYang.jpg" class="staff"></div>
+                            <div><b><a href="https://www.episodeyang.com/" class="stafflink" target="_blank" style="color: #2EA9DF;">Ge Yang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/Zifan_SHI.jpg" class="staff"></div>
+                            <div><b><a href="https://vivianszf.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Zifan Shi</a></b></div>
+                            <div>Stanford / HKUST</div>
+                          </div>
+                        </td> 
+
+
+                        </tr>
+
+                        <tr>
+
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GuohaoLi.jpg" class="staff"></div>
+                            <div><b><a href="https://ghli.org/" class="stafflink" target="_blank" style="color: #2EA9DF;">Guohao Li</a></b></div>
+                            <div>University of Oxford</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/HanziMao.png" class="staff"></div>
+                            <div><b><a href="https://hanzimao.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a></b></div>
+                            <div>Nvidia Research</div>
+                            <!-- <div>Nvidia Deep Imagination Research</div> -->
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/haohemit.jpg" class="staff"></div>
+                            <div><b><a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" class="stafflink" target="_blank" style="color: #2EA9DF;">Hao He</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/LijieFan.jpeg" class="staff"></div>
+                            <div><b><a href="http://lijiefan.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lijie Fan</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+
+                        <td>
+                          <div class="staff">
+                           <!--  <div><img src="src/LijieFan.jpeg" class="staff"></div>
+                            <div><b><a href="http://lijiefan.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lijie Fan</a></b></div>
+                            <div>MIT CSAIL</div> -->
+                          </div>
+                        </td> 
+
+                        
+                      </tr>
+                    </tbody></table>
+
+
+                </div>
+              </center>
+            </section>
+
+
+
+
+
+            <section id="schedule" class="main special">
+              <center>
+                <header class="major">
+                  <h2>Tentative Schedule (subject to changes)</h2>
+                </header>
+                <div style="margin-top: -20px;margin-bottom: 10px;margin-left: 120px;text-align:left;">
+                   <!--  <ul> 
+                        <li><font color=#800000>[R]eading</font>: read through the materials before the lecture.</li>
+                        <li><font color=#800000>[C]oding</font>: coding assignment after the lecture.</li>
+                    </ul>  -->
+                </div>
+                  <div class="table-wrapper" style="width:100%;margin:auto;">
+                    <font style="font-size: 16px">
+                        <table class="alt">
+						  <tbody>
+                          </tbody><colgroup>
+                              <col width="12%">
+                              <col width="10%">
+                              <col width="28%">
+                              <col width="32%">
+                              <col width="12%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th style="text-align:center">Theme</th>
+                              <th style="text-align:center">Date</th>
+                              <th style="text-align:center">Topic</th>
+                              <th style="text-align:center">Materials</th>
+                              <th style="text-align:center">Assignments</th>
+                            </tr>
+                          </thead>
+                          <style>
+                            ul.materials {
+                                padding-left: 15px;
+                            }
+                            div.subtopic {
+                                font-style: normal;
+                                font-family: HelveticaNeue-Light;
+                                font-weight: 200;
+                            }
+                            td.topic {
+                                font-family: HelveticaNeue;
+                                font-weight: 600;
+                            }
+                             td.topic2 {
+                                font-family: HelveticaNeue;
+                                font-style: italic;
+                                font-weight: 200;
+                            }
+                          </style>
+
+    <!-- Start schedule -->
+    <tbody>
+      <tr>
+          <td align=center colspan="5"> <h3><font color=#800000>Module I: Deep Learning Basics</font></h3></td>
+      </tr>
+      <tr>
+          <td rowspan=6 style="vertical-align:middle;text-align:center;">ML Basics<br/></td>
+        <td>Wed, Jan. 17</td>
+        <td class="topic">Lecture 1: Course Introduction
+          <div class="subtopic">
+            Course overview, <br/>
+            Course logistics
+            </div>
+        </td>
+        <td> 
+          <ul class="materials">
+              <!-- <li>[T] Chap. 1, [Z] <a href="https://d2l.ai/chapter_introduction/index.html">Chap. 1</a></li> -->
+              <li><a href="https://www.dropbox.com/scl/fi/ffykeoybnsax55l9q9qdt/Lecture-1.pdf?rlkey=xh9lv8pufz7wk9kixa5a7uyk5&dl=0" target="_blank">[Slides]</a> </li>
+              <li><a href="https://www.dropbox.com/home/csci3399/s24/slides?preview=Waymo.MOV" target="_blank">[Waymo Demo]</a> </li>
+              <li><a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank">[Python Tutorial]</a>, 
+              
+              <a href="https://cs231n.github.io/setup-instructions/#working-remotely-on-google-colaboratory">[Colab]</a>
+              <br/> </li>
+              <li><a href="https://www.deeplearningbook.org/contents/intro.html" target="_blank">[DL Sec 1.2] </a>,
+              <a href="https://www.deeplearningbook.org/contents/mlp.html" target="_blank">[DL Sec 6.6] </a>
+              <br/> </li>
+              <!-- <li>AI for <a href="https://www.youtube.com/watch?v=ii-FfE-7C-k">healthcare</a>, <a href="https://www.youtube.com/watch?v=ETq_9YFUQvU">bioimage</a>, <a href="https://www.youtube.com/watch?v=9fAcjfnWyso">medical image</a></li> -->
+          </ul>
+        </td>
+        <td> 
+          <!-- <a href="https://drive.google.com/drive/folders/1iZcw9dK6DSmKxAsErCZW3tSr479yAPFF?usp=share_link">lab0 out</a>  -->
+           </td>
+      </tr>
+      <tr>
+        <td>Fri, Jan. 19 </td>
+        <td class="topic">Lecture 2: Machine Learning Basics
+          <div class="subtopic">
+              Machine learning overview </br>
+              ML: pipeline, tasks </br>
+              Linear regression, Polynomial regression </br>
+            </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/bbzlqayzcgg7eg9gee3i3/Lecture-2.pdf?rlkey=y68nf6z5g5cf03eydnvuv51h7&dl=0" target="_blank">[Slides]</a> </li>
+            <li><a href="https://realpython.com/linear-regression-in-python/" target="_blank">[Linear Regression Python Tutorial]</a> </li>
+            <li><a href="https://www.deeplearningbook.org/contents/ml.html" target="_blank">[DL Sec 5.1 to 5.3] </a> </li>
+
+            
+            <!-- <li>[T] Chap. 2</li>
+            <li>Microscopy: <a href="https://www.youtube.com/watch?v=bjcewKLlb2Y">history</a>, <a href="https://www.youtube.com/watch?v=4c5ILWQmqRY">overview</a></li>
+            <li>Medical: <a href="https://www.youtube.com/watch?v=gsV7SJDDCY4&list=PLHXTeFF7XC2EGpKUTjKa7Uvb_QX3EsRvo&index=1">X-ray/CT</a>, <a href="https://www.youtube.com/watch?v=4JLNb8-LOB0">Ultrasound</a>, <a href="https://www.youtube.com/watch?v=nFkBhUYynUw">MRI</a>, <a href="https://www.youtube.com/watch?v=yrTy03O0gWw&list=PLHXTeFF7XC2EGpKUTjKa7Uvb_QX3EsRvo&index=6">PET</a></li> -->
+          </ul>
+        </td>
+        <td> 
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mon, Jan. 22 </td>
+        <td class="topic">
+            Lecture 3: Linear regression
+          <div class="subtopic">
+            Optimization: gradient-based solution, closed-form solution </br>
+            Underfit, Overfit, Regularization, Generalization </br>
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/975oedctsp991owqslp4c/Lecture-3.pdf?rlkey=i13ttna57ggbkn1wwwqg5ir0n&dl=0" target="_blank">[Slides]</a> </li>
+            <!-- <li>[T] Chap. 4.2.1, 4.3</li>
+            <li>numpy.org: <a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy 101</a></li> -->
+          </ul>
+        </td>
+
+        <td> 
+          Assignment 1 out
+          <li><a href="https://www.dropbox.com/home/csci3399/s24/Assignments?di=left_nav_browse&preview=lab1a_python_tutorial.ipynb" target="_blank">[Lab1a: Python Basic]</a> </li>
+          <li><a href="https://www.dropbox.com/home/csci3399/s24/Assignments?di=left_nav_browse&preview=lab1b_linear_regression.ipynb" target="_blank">[Lab1b: Linear Regression]</a> </li>
+        </td>
+      </tr>
+      <tr>
+        <td>Wed, Jan. 24 </td>
+        <td class="topic">
+            Lecture 4: Neural Network
+          <div class="subtopic">
+              Binary Classification / Multi-Class Classification </br>
+              Sigmoid / Softmax </br>
+              Cross-Entropy Loss
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/home/csci3399/s24/slides?preview=Lecture+4.pdf" target="_blank">[Slides]</a></li>
+            <li><a href="https://d2l.ai/chapter_linear-classification/softmax-regression.html" target="_blank">[D2L Sec 4.1] </a> </li>
+            <li><a href="https://www.youtube.com/watch?v=ErfnhcEV1O8&themeRefresh=1" target="_blank">[A short intro to Entropy, Cross-Entropy and KL Divergence] </a> </li>
+            <li><a href="https://cs231n.github.io/classification/" target="_blank">[231n Image Classification]</a></li>
+            <li><a href="https://cs231n.github.io/linear-classify/" target="_blank">[231n Linear Classification]</a></li>
+            
+          </ul>
+        </td>
+        <td>
+<!--           <strike><font color=#800000>lab0 due</font></strike>
+            <br/>ps1 out (dip) -->
+        </td>
+      </tr>
+
+<!--       <tr class="gray">
+        <td>Fri, Jan. 26 </td>
+        <td class="topic2"><a href="https://www.dropbox.com/s/yrh7cv2fazy7kzz/lab1-linear-algrebra.pdf?dl=0">Lab 1: Numpy Basics</a>
+          <div class="subtopic">
+          </div>
+        </td>
+        <td>
+            <i>Maths review: linear algebra</i>
+          <ul class="materials">
+            <li><a href="https://www.deeplearningbook.org/contents/linear_algebra.html">Goodfellow Chapter 2</li>
+            <li><a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of linear algebra</li>
+          </ul>
+        </td>
+        <td>
+        </td>
+      </tr> -->
+
+      <tr class="gray">
+        <td>Fri, Jan. 26 </td>
+        <td class="topic">
+            Lecture 5: Multi-Layer Perceptron (MLP)
+          <div class="subtopic">
+              Linear Problems / Non-Linear Problems </br>
+              Feature transforms
+              Model: Fully-connected networks </br>
+              Computational Graph </br>
+              Optimization: Backpropagation </br>
+<!--               Algebraic / Visual / Geometric viewpoints </br>
+              Softmax / SVM classifiers -->
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/home/csci3399/s24/slides?preview=Lecture+5.pdf" target="_blank">[Slides]</a></li>
+            <li><a href="https://playground.tensorflow.org/" target="_blank">[MLP web training]</a></li>
+            <li><a href="https://cs231n.github.io/classification/" target="_blank">[231n Image Classification]</a></li>
+
+            
+          </ul>
+        </td>
+        <td>
+<!--           <strike><font color=#800000>lab0 due</font></strike>
+            <br/>ps1 out (dip) -->
+        </td>
+      </tr>
+
+      <tr class="gray">
+        <td>Mon, Jan. 29</td>
+        <td class="topic">
+            Lecture 6: Activation Functions and Optimization
+            <div class="subtopic">
+            Activation Functions: ReLU, Sigmoid, tanh, Leaky ReLU, ELU </br>
+            Regularization  </br>
+            Weight decay </br>
+ <!--            Lecture 5: Regularization + Optimization
+            <div class="subtopic">
+            Regularization  </br>
+            Weight decay </br>
+            Stochastic Gradient Descent </br>
+            Momentum, AdaGrad, Adam </br>
+            Second-order optimizers </br> -->
+          </div>
+        </td>
+        <td>
+            <!-- <i>Maths review: linear algebra</i> -->
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/c1b5gnzy7ge202l9k0lqw/Lecture-6.pdf?rlkey=7ub89fivcm1gshv9utkog9qf7&dl=0">[Slides]</a></li>
+            <li><a href="https://playground.tensorflow.org/" target="_blank">[MLP web training]</a></li>
+            <li><a href="https://cs231n.github.io/classification/" target="_blank">[231n Image Classification]</a></li>
+<!--             <li><a href="https://cs231n.github.io/optimization-1/">[231n Optimization]</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/optimization.html">[DL Sec. 8.1 to 8.6]</a></li> -->
+          </ul>
+        </td>
+        <td> 
+          Assignment 1 due (Jan. 30)
+        </td>
+
+      </tr>
+
+      <tr>
+        <!-- <td rowspan=12 style="vertical-align:middle;text-align:center;" bgcolor="#FFBFBF">Deep Learning Architectures<br/></td> -->
+        <td rowspan=12 style="vertical-align:middle;text-align:center;">Deep Learning Architectures<br/></td>
+        <td>Wed, Jan. 31</td>
+        <td class="topic">
+            Lecture 7: Convolutional Neural Networks (CNNs)
+            <div class="subtopic">
+          <!--   Softmax </br>
+            Layer: activation linear -->
+
+            <!-- Neural Networks </br> -->
+            Weight initialization, dropout, haperparameters </br>
+            Universal approximation theorem </br>
+            Intro to CNNs -- Convolution </br>
+          </div>
+        </td>
+        <td>
+            <!-- <i>Task I: Region of Interest (ROI) Detection</i> -->
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/f1rvfl8wbzfeqfzjj9sat/Lecture-7.pdf?rlkey=p8zayh0xmxvato9xlroz0djlj&dl=0">[Slides]</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/regularization.html">[DL Sec. 7.1]</a>, <a href="https://d2l.ai/chapter_builders-guide/init-param.html">[D2L Sec. 6.3]</a></li>
+            <li><a href="https://www.deeplearningbook.org/contents/convnets.html">[DL Sec. 9.1, 9.2]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/why-conv.html">[D2L Sec. 7.1]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html">[D2L Sec. 7.2]</a></li>
+          </ul>
+        </td>
+
+        <td>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td>Fri, Feb. 2</td>
+        <td class="topic">
+            Lecture 8: Convolutional Neural Networks (CNNs)
+            <div class="subtopic">
+            Convolution: kernel, receptive field, stride </br>
+            Padding </br>
+            Learning convolutional filters </br>
+            One layer (breadth): multiple kernels </br>
+            K layers (depth): nonlinearity in between </br>
+          </div>
+
+            
+        </td>
+        <td>
+            <!-- <i>Task II: Image Preprocessing</i> -->
+          <ul class="materials">
+              <li><a href="https://www.dropbox.com/scl/fi/kjzi5bwswrowxzih49alb/Lecture-8.pdf?rlkey=94xz0yxz6nillmjft56k5g1e0&dl=0" target="_blank">[Slides]</a></li>
+              <li><a href="https://setosa.io/ev/image-kernels/" target="_blank">[Image Kernels]</a></li>
+              <li><a href="https://www.deeplearningbook.org/contents/convnets.html" target="_blank">[DL Sec. 9.3, 9.4]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/conv-layer.html" target="_blank">[D2L Sec. 7.2]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/padding-and-strides.html" target="_blank">[D2L Sec. 7.3]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/channels.html" target="_blank">[D2L Sec. 7.4]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/pooling.html" target="_blank">[D2L Sec. 7.5]</a></li>
+
+              
+          </ul>
+        </td>
+
+        <td>
+            <!-- <strike><font color=#800000>lab1 due</font></strike> -->
+        </td>
+      </tr>
+
+      <tr class="gray">
+        <td>Mon, Feb. 5</td>
+        <td class="topic">
+          Lecture 9: Convolutional Neural Networks (CNNs)
+          <div class="subtopic">
+            Pooling </br>
+            AlexNet </br>
+            Batch Normalization </br>
+            ResNet + Residual Blocks </br>
+          </div>
+        </td>
+        <td>
+            <i></i>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/3g5xh3ll51ab4yrbu17hq/Lecture-9.pdf?rlkey=e8cn0kiead73w7ryo5pefighx&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://d2l.ai/chapter_convolutional-neural-networks/pooling.html" target="_blank">[D2L Sec. 7.5]</a>, <a href="https://d2l.ai/chapter_convolutional-neural-networks/lenet.html" target="_blank">[D2L Sec. 7.6]</a></li>
+            <li><a href="https://d2l.ai/chapter_convolutional-modern/alexnet.html" target="_blank">[D2L Sec. 8.1]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/vgg.html" target="_blank">[D2L Sec. 8.2]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/nin.html" target="_blank">[D2L Sec. 8.3]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/googlenet.html" target="_blank">[D2L Sec. 8.4]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/batch-norm.html" target="_blank">[D2L Sec. 8.5]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html" target="_blank">[D2L Sec. 8.6]</a></li>
+          </ul>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr class="gray">
+        <td>Wed, Feb. 7</td>
+        <td class="topic">
+          <!-- <a href="https://www.dropbox.com/s/604xsxymlt5ryxv/lab2-opencv.pdf?dl=0">Lab 2: Registration Toolbox</a> -->
+          Lecture 10: CNN Architectures
+          <div class="subtopic">
+            AlexNet, VGGNet, GoogLeNet, BatchNorm, ResNet </br>
+            Deep Learning Framework </br>
+          </div>
+        </td>
+        <td>
+            <i></i>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/r61c4t4xfa99qidqsp0wk/Lecture-10.pdf?rlkey=n0e3quqoag4mvqvetvkyg40ks&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="http://cs231n.stanford.edu/slides/2023/lecture_6.pdf" target="_blank">[CS231n CNN Architectures]</a></li>
+            <li><a href="https://d2l.ai/chapter_convolutional-modern/alexnet.html" target="_blank">[D2L Sec. 8.1]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/vgg.html" target="_blank">[D2L Sec. 8.2]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/nin.html" target="_blank">[D2L Sec. 8.3]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/googlenet.html" target="_blank">[D2L Sec. 8.4]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/batch-norm.html" target="_blank">[D2L Sec. 8.5]</a>, <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html" target="_blank">[D2L Sec. 8.6]</a></li>
+          </ul>
+        </td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>Fri, Feb. 9</td>
+        <td class="topic">
+            Lecture 11: Training Neural Networks
+
+          <div class="subtopic">
+              Activation functions </br>
+              Data preprocessing </br>
+              Weight initialization </br>
+              Data augmentation </br>
+              Regularization (Dropout, etc) </br>
+              Learning rate schedules </br>
+              Hyperparameter optimization </br>
+              Transfer learning </br>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/60t3ylbttxnn9rglzo0jj/Lecture-11.pdf?rlkey=oagxdzwpy9ho5lg0mmfpjpagh&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://cs231n.github.io/neural-networks-2/" target="_blank">[CS231n Traning I]</a></li>
+            <li><a href="https://karpathy.github.io/2019/04/25/recipe/" target="_blank">[Karpathy "Recipe for Training"]</a></li>
+            
+          </ul>
+        </td>
+
+
+        <td> 
+          Assignment 2 out
+          
+          <li><a href="https://www.dropbox.com/scl/fi/zw1w4sppx9tv8s7n9d7tc/lab2a_gradient_descent.ipynb?rlkey=f08594x86b1qxwr4jjr276ck6&dl=0" target="_blank">[Lab2a: Gradient Descent]</a> </li>
+
+          <li><a href="https://www.dropbox.com/scl/fi/9hkvu5gnw55huria0f84x/lab2b_PyTorch.ipynb?rlkey=d5vq6nxv2sf6c3458yo1yh0fb&dl=0" target="_blank">[Lab2b: PyTorch]</a> </li>
+
+          <li><a href="https://www.dropbox.com/scl/fi/yev05bt37jbjwt98z8gcf/lab2c_linear_classifier.ipynb?rlkey=9u7a53dkekqwc47xq1ynn65uy&dl=0" target="_blank">[Lab2c: Linear Classifier]</a> </li>
+
+
+        </td>
+      </tr>
+      <tr>
+        <td>Mon, Feb. 12</td>
+        <td class="topic">
+          Lecture 12: Deep Learning Framework
+          <div class="subtopic">
+              Hyperparameter optimization </br>
+              Transfer learning </br>
+              PyTorch </br>
+              Dynamic vs Static graphs </br>
+        </td>
+        <td>  
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/iedytjc40p22gj1o53dby/Lecture-12.pdf?rlkey=4mrryokz1dwk36n4bvbk5okmt&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/0d02kcboz8kq9m3ynepth/9_hackers_guide.pdf?rlkey=cryutcyvjanbl29mvubyaz0uz&e=1&dl=0" target="_blank">[Hacker’s guide to DL]</a></li>
+              
+          </ul>
+        </td>
+
+        <td>
+            <!-- <strike><font color=#800000>lab2 due</font></strike> -->
+        </td>
+
+    </tr>
+      <tr class="gray">
+        <td>Wed, Feb. 14</td>
+        <td class="topic">
+          <!-- CNN Architectures II -->
+          Lecture 13: PyTorch Review Session 
+          <div class="subtopic">
+              PyTorch </br>
+              Final project overview </br>
+              Life cycle of a Machine Learning System </br>
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/lmmstovb4cmgsq2quqknj/Lecture-13.pdf?rlkey=tpf23qya2sumzd607wo9t9mmv&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/0d02kcboz8kq9m3ynepth/9_hackers_guide.pdf?rlkey=cryutcyvjanbl29mvubyaz0uz&e=1&dl=0" target="_blank">[Hacker’s guide to DL]</a></li>
+              <!-- <li>[Z] D2L: <a href="https://d2l.ai/chapter_optimization/index.html">12.1</a></li> -->
+              
+          </ul>
+        </td>
+        <td>
+        </td>
+      </tr>
+       
+      </tr>
+      <tr class="gray">
+        <td>Fri, Feb. 16</td>
+        <td class="topic">
+          <!-- CNN Architectures II -->
+          Lecture 14: Recurrent Neural Networks (RNNs)
+          <div class="subtopic">
+          Life cycle of a Machine Learning System </br>
+          Sequential models use cases </br>
+          CNNs for sequences </br>
+          RNNs </br>
+<!--           Grouped and Separable Convolution </br>
+          ResNeXt </br>
+          Squeeze-and-Excite </br>
+          MobileNets / ShufleNets </br>
+          Neural Architecture Search </br>
+          EfficientNets </br>
+          NFNets </br>
+          Revisting ResNets </br>
+          RegNets </br> -->
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/3adt3i7eamofqysmg12wd/Lecture-14.pdf?rlkey=i3ach8hlf9kxxirav7762swmi&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/huhp63uo0io242vihhx0f/rnns.pdf?rlkey=1r99da935tdwz1s67pxle6pdg&e=1&dl=0" target="_blank">[RNNs]</a></li>
+            
+          </ul>
+        </td>
+        <td>
+          Assignment 2 due (Feb. 18)
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Mon, Feb. 19</td>
+        <td class="topic">
+        Lecture 15: Recurrent Networks: Stability analysis and LSTMs  
+         <div class="subtopic">
+        Gradient Explosion </br>
+        LSTM, GRU </br>
+        Language modeling </br>
+        </td>
+        <td>
+            <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/kr5jy0egkeyv61dxxgza0/Lecture-15.pdf?rlkey=7b2erfad1p6fehlt511g7yym3&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/huhp63uo0io242vihhx0f/rnns.pdf?rlkey=1r99da935tdwz1s67pxle6pdg&e=1&dl=0" target="_blank">[RNNs]</a></li>
+            <li><a href="https://www.cs.cmu.edu/~bhiksha/courses/deeplearning/Spring.2019/archive-f19/www-bak11-22-2019/document/lecture/lec13.recurrent2.pdf" target="_blank">[RNN Stability analysis and LSTMs]</a></li>
+            
+          </ul>
+
+        </td>
+        <td>
+            Assignment 3 out: 
+
+            <li><a href="https://www.dropbox.com/scl/fi/cg065z23vna9oew9ajiuq/lab3_autograd_and_nn.ipynb?rlkey=y1873vh5wm2dvvkzc61ev7byh&dl=0" target="_blank">[Lab3: Autograd and NN]</a> </li>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Wed, Feb. 21</td>
+        <td class="topic">
+          Lecture 16: Recurrent Networks: Stability analysis and LSTMs (2)
+
+            <!-- <a href="https://www.dropbox.com/s/x61rz71rtocwaaa/lec9-image-seg2.pdf?dl=0">Lec. 9: Image Segmentation II </a> -->
+          
+        </td>
+        <td>
+          <ul class="materials">
+          <li><a href="https://www.dropbox.com/scl/fi/77z0632k48vhu5n4j34ss/Lecture-16.pdf?rlkey=f4q52vapi2o2ec8jfux7nkfma&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Fri, Feb. 23</td>
+        <td class="topic">
+          Lecture 17: Attention and Transformers
+          <div class="subtopic">
+            Self-Attention </br>
+            Transformers </br>
+              <!-- Instance: Watershed, Graph cut -->
+              </div>
+          
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+              <li><a href="https://www.dropbox.com/scl/fi/lztzugqwkddmzuf7ebcii/Lecture-17.pdf?rlkey=cmnmtc6vn2jfmokuwsxbcri97&dl=0" target="_blank">[Slides]</a></li>
+              <li><a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">[Attention is all you need]</a></li>
+              <li><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">[BERT Paper]</a></li>
+              <li><a href="http://jalammar.github.io/illustrated-transformer/" target="_blank">[The Illustrated Transformer]</a></li>
+              <li><a href="https://arxiv.org/pdf/2207.09238.pdf" target="_blank">[Formal Algorithms for Transformers]</a></li>
+          </ul>
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mon, Feb. 26</td>
+        <td class="topic">
+          Lecture 18: Attention and Transformers (2)
+
+          <!-- <a href="https://www.dropbox.com/s/d8s6vxvh5ql19jc/lab4-segmentation-toolbox.pdf?dl=0">Lab 4: Segmentation Toolbox</a> -->
+          <!-- Lecture 18: Natural Language Processing: Large Language Models -->
+          <div class="subtopic">
+          Multi-head Self-Attention </br>
+          Mask Self-Attention </br>
+            <!-- BERT & GPT </br> -->
+<!--               Post-processing: Morphological operation
+              <br/>Analysis: Descriptive statistics -->
+          </div>
+        </td>
+        <td>
+          <ul class="materials">
+            <li><a href="https://www.dropbox.com/scl/fi/runoajcsch1tbwva3kodv/Lecture-18.pdf?rlkey=r6qyo74gg3e790nqdqxndlutg&dl=0" target="_blank">[Slides]</a></li>
+ <!--              <li><a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">[Attention is all you need]</a></li>
+              <li><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">[BERT Paper]</a></li>
+              <li><a href="http://jalammar.github.io/illustrated-transformer/" target="_blank">[The Illustrated Transformer]</a></li>
+              <li><a href="https://arxiv.org/pdf/2207.09238.pdf" target="_blank">[Formal Algorithms for Transformers]</a></li>
+ -->
+          </ul>
+        </td>
+
+        <td>
+          Assignment 3 due (Feb. 27)
+            </td>
+      </tr>
+
+      <tr>
+          <td align=center colspan="5"><h3><font color=#800000> Module II: Advanced Topics on Deep Learning</font></h3></td>
+      </tr>
+      <tr>
+        <td rowspan=5 style="vertical-align:middle;text-align:center;">Vision Applications<br/></td>
+        <td>Wed, Feb. 28</td>
+        <td class="topic">
+            Lecture 19: BERT and GPTs
+          <div class="subtopic">
+          Encoder-Decoder Attention </br>
+          Word Embedding </br>
+          Pre-training </br>
+<!--           ViT, DeiT </br>
+          Swin, MViT </br>
+          DETR </br>
+          MLP-like architectures </br> -->
+            </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/psz25q4kxbavv744gsedd/Lecture-19.pdf?rlkey=1fxfrarvfyusxphiayg4rkbfm&dl=0" target="_blank">[Slides]</a></li>
+<!--             <i>Overview</i>
+          <ul class="materials">
+              <li>[Z] <a href="https://d2l.ai/chapter_introduction/index.html">Chap. 1</a></li>
+          </ul> -->
+        </td>
+        <td>
+<!--             <a href="https://docs.google.com/spreadsheets/d/1c-18oXsqpeWGUPs-h8H8TnEmVPAC4cR7RurL1TPXXoo/edit#gid=0">fp team sign-up</a>
+            <br/>ps2 out (dip+image) -->
+        </td>
+      </tr>
+      <tr>
+        <td>Fri, Mar. 1</td>
+        <td class="topic">
+          Lecture 20: Training Large Language Models
+          <!-- Lecture 16: Video Understanding -->
+            <div class="subtopic">
+            Self-Supervised Learning </br>
+          Data Scaling </br>
+<!--             Video classification </br>
+            3D CNNs </br>
+            Two-stream networks </br>
+            Multimodal video understanding </br> -->
+            </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/2z7g0r9pod5a6cgfacy9v/Lecture-20.pdf?rlkey=fk5tmpul1hwc9q94aounx2lxx&dl=0" target="_blank">[Slides]</a></li>
+            <!-- <i>AlexNet: linear layer</i>
+          <ul class="materials">
+              <li>[Z] <a href="https://d2l.ai/chapter_linear-regression/index.html">Chap. 3</a></li>
+          </ul> -->
+        </td>
+
+        <td>
+            
+        </td>
+      </tr>
+
+
+ 
+      <tr>
+        <td>Mon, Mar. 11</td>
+       <td class="topic">
+
+<!--             Lecture 17: Object Detection
+
+            
+          <div class="subtopic">
+Single-stage detectors </br>
+Two-stage detectors </br> -->
+
+            Lecture 20: Training Large Language Models (2)
+
+            <div class="subtopic">
+            Self-Supervised Learning </br>
+            Data Scaling </br>
+
+
+          </div>
+        </td>
+
+        <td>
+
+                  <li><a href="https://www.dropbox.com/scl/fi/2z7g0r9pod5a6cgfacy9v/Lecture-20.pdf?rlkey=fk5tmpul1hwc9q94aounx2lxx&dl=0" target="_blank">[Slides]</a></li>
+
+                  <li><a href="https://github.com/Mooler0410/LLMsPracticalGuide?tab=readme-ov-file" target="_blank">[The Practical Guides for Large Language Models]</a></li>
+
+                  
+            
+        </td>
+
+        <td>
+            Assignment 4 out:  
+          <li><a href="https://www.dropbox.com/scl/fi/9t6iqyu9ygl5dfgkia2pt/lab4_neural_machine_translation.ipynb?rlkey=umy89kkfgexkxkcfmtgql15lp&dl=0" target="_blank">[Lab4: Neural Machine Translation]</a> </li>
+        </br>
+            Project proposal due (Mar. 12)
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Wed, Mar. 13</td>
+       <td class="topic">
+            Lecture 21: Computer Vision: Detection and Segmentation
+
+            <!-- <a href="https://www.dropbox.com/s/s47aglwdjtyknkr/lec14-dl-mlp.pdf?dl=0">Lec. 14: Multilayer Perceptron</a> -->
+          <div class="subtopic">
+            Semantic segmentation </br>
+          Object detection </br>
+        Instance segmentation </br>
+          </div>
+        </td>
+        <td>
+            <li><a href="https://www.dropbox.com/scl/fi/sym5iscjzf069sch7xgdj/Lecture-21.pdf?rlkey=tpp5g6nta5ftmjvbnjjd8qfyp&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+        <td>
+            
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Fri, Mar. 15</td>
+       <td class="topic">
+        Lecture 22: Generative Models (1)
+            <!-- Guest Speaker: X-vision: See through the wall -->
+
+            <!-- <a href="https://www.dropbox.com/s/s47aglwdjtyknkr/lec14-dl-mlp.pdf?dl=0">Lec. 14: Multilayer Perceptron</a> -->
+          <div class="subtopic">
+          Unsupervised Learning </br>
+          Clustering / PCA </br>
+          Autoregressive Models </br>
+<!-- Single-stage detectors </br>
+Two-stage detectors </br>
+Semantic/Instance/Panoptic segmentation </br> -->
+          </div>
+        </td>
+        <td>
+            <li><a href="https://www.dropbox.com/scl/fi/jhpzm05xh8oiktbhicg4n/Lecture-22.pdf?rlkey=eqsqam3bsmh55jxh5dp7uz7uc&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+        <td>
+            
+        </td>
+      </tr>
+
+      
+
+      <tr>
+        <td rowspan=13 style="vertical-align:middle;text-align:center;">Generative and Interactive Visual Intelligence<br/></td>
+        <td>Mon, Mar. 18</td>
+        <td class="topic">
+          Lecture 23: Generative Models (2) -- VAEs
+          <div class="subtopic">
+              Convolutional AEs, Transpose Convolution</br>
+              Variational Autoencoders (VAE) </br>
+        </td>
+        <td>
+            <li><a href="https://www.dropbox.com/scl/fi/pm219u2tlpvtgub2fk46g/Lecture-23.pdf?rlkey=dh0xfqhnsp28fitpw5djh6tj6&dl=0" target="_blank">[Slides]</a></li>
+            <li><a href="https://www.dropbox.com/scl/fi/i6bd17t4u206xjxrca4hh/Convolutional-Autoencoder.pdf?rlkey=2algqs95hxvqml8ypx1vo1ium&dl=0" target="_blank">[Reading: Convolutional AEs]</a></li>
+        </td>
+        <td>
+            <!-- <strike> <font color=#800000>ps2 due</font></strike> -->
+            Assignment 4 Part 1 (LSTM and Attention) due (Mar. 19)
+        </td>
+    </tr>
+
+
+          <tr>
+        <td>Wed, Mar. 20</td>
+        <td class="topic">
+        Lecture 24: Generative Models (2) -- VAEs (continued)
+          <div class="subtopic">
+              VAE Loss - KL Divergence </br>
+              Reparameterization trick </br>
+              Conditional VAE </br>
+          </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/3abe91x130wcrv2eu1594/Lecture-24.pdf?rlkey=mwmih29kyros5skueqwsiwd2k&dl=0" target="_blank">[Slides]</a></li>
+          <li><a href="https://www.youtube.com/watch?v=9_eZHt2qJs4" target="_blank">[KL Divergence]</a></li>
+        </td>
+        <td>
+        </td>
+      </tr>
+
+          <tr>
+        <td>Fri, Mar. 22</td>
+        <td class="topic">
+        Lecture 25: Generative Models (3) -- GANs
+          <div class="subtopic">
+              Generative Adversarial Networks (GANs) </br>
+              Training GANs and challenges </br>
+              Applications </br>
+          </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/82z77qob5454l2rku5amu/Lecture-25.pdf?rlkey=kxdg8rw3l2gpgqq29cyncpuyt&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+        <td>
+        </td>
+      </tr>
+
+
+            <tr>
+        <td>Mon, Mar. 25</td>
+        <td class="topic">
+        Lecture 26: Generative Models (4) -- Diffusion Models
+          <div class="subtopic">
+              Denoising Diffusion Probabilistic Models (DDPMs) </br>
+              Conditional Diffusion Models </br>
+          </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/5j3mtw96vfqdcvg9hi3j1/Lecture-26.pdf?rlkey=r4qp7a1o2qof4iim70x30qsi6&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+        <td>
+          Assignment 4 Part 2 (Transformers) due (Mar. 28)
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Wed, Mar. 27</td>
+        <td class="topic">
+            Lecture 26: Generative Models (4) -- Diffusion Models (continued)
+          <div class="subtopic">
+              Denoising Diffusion Probabilistic Models (DDPMs) </br>
+              Conditional Diffusion Models </br>
+           </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/5j3mtw96vfqdcvg9hi3j1/Lecture-26.pdf?rlkey=r4qp7a1o2qof4iim70x30qsi6&dl=0" target="_blank">[Slides]</a></li>
+        </td>
+        <td>
+            Project milestone due (Mar. 31)
+        </td>
+      </tr>
+
+
+      <tr>
+        <td align=center colspan="5">No Class (Good Friday)</td>
+      </tr>
+      <tr>
+        <td align=center colspan="5">No Class (Easter Monday)</td>
+      </tr>
+
+      <tr>
+          <!-- <td rowspan=4 style="vertical-align:middle;text-align:center" bgcolor="#EDE0A6">DL+2D Images<br/>[Week 10-12]</td> -->
+        <td>Wed, Apr. 3</td>
+        <td class="topic">
+          Lecture 27: Self-supervised Learning
+          <div class="subtopic">
+              Pretext tasks </br>
+              Contrastive representation learning </br>
+              Instance contrastive learning: SimCLR and MOCO </br>
+              Sequence contrastive learning: CPC </br>
+            <br/></div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/sygk1jppz0dgsp4wdtuof/Lecture-27.pdf?rlkey=jglxtogthea3fdzyf3qfvo4xr&dl=0" target="_blank">[Slides]</a></li>
+<!--             Overview and applications
+          <ul class="materials">
+              <li>Papers: <a href="https://www.sciencedirect.com/science/article/pii/S2095809918301887">review</a></li>
+              <li>YouTube: <a href="https://www.youtube.com/watch?v=TK2EhGvXPMY&t=377s">AI for healthcare</a></li>
+          </ul> -->
+        </td>
+
+        <td>
+            <!-- <strike><font color=#800000>fp proposal due</font></strike> -->
+        </td>
+
+      </tr>
+      
+
+
+      <tr>
+        <td>Fri, Apr. 5</td>
+        <td class="topic">
+            Lecture 27: Self-supervised learning (continued)
+          <div class="subtopic">
+            </div>
+        </td>
+        <td>
+          <li><a href="https://www.dropbox.com/scl/fi/sygk1jppz0dgsp4wdtuof/Lecture-27.pdf?rlkey=jglxtogthea3fdzyf3qfvo4xr&dl=0" target="_blank">[Slides]</a></li>
+          <li><a href="https://arxiv.org/pdf/2002.05709.pdf" target="_blank">[SimCLR]</a></li>
+          <li><a href="https://arxiv.org/pdf/1911.05722.pdf" target="_blank">[MoCo]</a></li>
+          <li><a href="https://arxiv.org/pdf/2003.04297.pdf" target="_blank">[MoCo v2]</a></li>
+          <li><a href="https://arxiv.org/pdf/1807.03748.pdf" target="_blank">[CPC]</a></li>
+          
+          
+          <!-- <ul class="materials"> -->
+            <!-- <li>YouTube: <a href="https://www.youtube.com/watch?v=06-AZXmwHjo">Data-centric AI</a></li> -->
+          </ul>
+        </td>
+
+        <td> 
+        </td>
+      </tr>
+
+
+      <tr class="gray">
+        <td>Mon, Apr. 8 <br/></td>
+        <td class="topic">
+          <span style="color: #33A6B8;">LLaVA: A Vision-and-Language Approach to Computer Vision in the Wild</span>
+          <!-- <b>LLaVA: A Vision-and-Language Approach to Computer Vision in the Wild</b> -->
+
+        <!-- Guest Lecture: Large Vision and Language Models -->
+          <div class="subtopic">
+              <!-- Style transfer and DALL.E -->
+              Guest Speaker: <a href="https://chunyuan.li/" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a> (Microsoft Research) <br>
+
+              <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92229631156" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92229631156</p></a> -->
+
+              <!-- <p style="font-size: 12px;">Bio: Chunyuan Li is currently a Research Lead at ByteDance/TikTok, based in the Seattle area. From 2018 to 2023, He worked as a Principal Researcher in the Deep Learning Team at Microsoft Research, Redmond. Before that, Chunyuan obtained his PhD at Duke University, working on probabilistic deep learning. He also spent time with Uber AI, Adobe Research, NIST and INRIA. At MSR, Chunyuan is mainly working on large-scale pre-training in computer vision (CV) and vision-language multimodality (MM), with a focus on building transferable vision models that can effortlessly generalize to a wide range of downstream CV & MM tasks. Chunyuan’s research has been frequently published in top venue conferences, including dozens of oral / spotlight presentations in NeurIPS, ICLR, ICML, CVPR and ACL, as well as receiving the Best Paper Finalist Award in CVPR 2022. He has served as an Area Chair for NeurIPS, ICML, ICLR, ACL, EMNLP & AAAI, and a Guest Editor of IJCV. More info: https://chunyuan.li/.</p> -->
+          </div>
+        </td>
+        <td>
+          <!-- <li><a href="https://chunyuan.li/doc/talk_cvinw_instruction_june2.pdf" target="_blank">[Slides]</a></li> -->
+          <p style="font-size: 12px;">Abstract: The future of AI is in creating systems like foundation models that are pre-trained once, and will handle countless many downstream tasks directly (zero-shot), or adapt to new tasks quickly (few-shot). In this talk, I will discuss our vision-language approach to achieving “Computer Vision in the Wild (CVinW)”:  building such a transferable system in computer vision (CV) that can effortlessly generalize to a wide range of visual recognition tasks in the wild. I will first describe the definition and current status of CVinW, and briefly summarize our efforts on benchmark and modeling. I will dive into Large Language-and-Vision Assistant (LLaVA) and its series, including LLaVA-Med, LLaVA-1.5,  LLaVA-NeXT, LLaVA-Interactive, LLaVA-Plus.  LLaVA family represents the first open-source project to exhibit the GPT-4V level capabilities in image understanding and reasoning. demonstrate a promising path to build customizable large multimodal models that follow humans' intent with an affordable cost.</p>
+
+          <p style="font-size: 15px;">Reference Papers: <a href="https://llava-vl.github.io/" target="_blank" style="color: #2EA9DF;">[LLaVA]</a>, <a href="https://github.com/microsoft/LLaVA-Med" target="_blank" style="color: #2EA9DF;">[LLaVA-Med]</a>, <a href="https://arxiv.org/pdf/2310.03744.pdf" target="_blank" style="color: #2EA9DF;">[LLaVA-1.5]</a>, <a href="https://llava-vl.github.io/blog/2024-01-30-llava-next/" target="_blank" style="color: #2EA9DF;">[LLaVA-NeXT]</a>, <a href="https://llava-vl.github.io/llava-interactive/" target="_blank" style="color: #2EA9DF;">[LLaVA-Interactive]</a>, <a href="https://llava-vl.github.io/llava-plus/" target="_blank" style="color: #2EA9DF;">[LLaVA-Plus]</a>.</p>
+
+          
+          
+        </td>
+        <td> </td>
+      </tr>
+
+
+      <tr>
+        <td>Wed, Apr. 10 <br/></td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Learning to and from Predict in Computer Vision</span>
+
+          <div class="subtopic">
+                      Guest Speaker: <a href="https://www.tianhongli.me/" target="_blank" style="color: #2EA9DF;">Tianhong Li</a> (MIT CSAIL) </br>
+
+                      <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=96757046427" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=96757046427</p></a> -->
+          </div>
+        </td>
+        <td>
+          <p style="font-size: 12px;">Abstract: Predictive learning has been a long-standing topic in computer vision and has gain increased attention recently due to the success of large language models. This lecture will introduce several pivotal studies within this domain. We begin with image inpainting — a technique vital for understanding context and filling missing information. We will then see how predictive learning could facilitate unsupervised representation learning. Finally, we will introduce how can we use predictive learning to generate novel images.</p></br>
+
+          <p style="font-size: 15px;">Reference Papers: <a href="https://compvis.github.io/taming-transformers/" target="_blank" style="color: #2EA9DF;">[VQGAN]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.pdf" target="_blank" style="color: #2EA9DF;">[MAE]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf" target="_blank" style="color: #2EA9DF;">[MAGE]</a>.</p>
+
+        </td>
+        <td>
+            
+        </td>
+      </tr>
+
+
+      <tr>
+        <td>Fri, Apr. 12 </td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Foundation Priors for Robot Perception: From Neural Radiance Fields to OpenAI Sora</span>
+          <!-- Lecture 24: 3D Vision -->
+
+          <div class="subtopic">
+                Guest Speaker: <a href="https://www.episodeyang.com/" target="_blank" style="color: #2EA9DF;">Ge Yang</a> (MIT CSAIL)
+          </div>
+        </td>
+        <td>
+          <p style="font-size: 12px;">Abstract: Recent developments in Artificial Intelligence have produced a trifecta of new techniques in generative modeling, computer graphics, and representation learning that once combined, will lead to radical changes in robotics. In this talk, we will study robot perception as an ill-defined inverse problem whose goal is to infer knowledge of the environment from noise and partial observability. We will start with Neural Radiance Fields (NeRFs) and study ways to combine them with prior knowledge from Foundation Models that are trained over internet-scale datasets to give robots the ability to know what is where in their surrounding environment. We will then look at the AI debate over priors vs data, and discuss how it is affected by recent results from OpenAI sora, the state-of-the-art AI system for generating videos from text.</p></br>
+
+          <p style="font-size: 15px;">Reference Papers: <a href="https://openai.com/research/clip" target="_blank" style="color: #2EA9DF;">[CLIP]</a>, <a href="https://www.matthewtancik.com/nerf" target="_blank" style="color: #2EA9DF;">[NeRF]</a>, <a href="https://f3rm.github.io/" target="_blank" style="color: #2EA9DF;">[Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation (CoRL 2023 Best Paper)]</a>.</p>
+
+        </td>
+
+        <td> 
+            <!-- <strike><font color=#800000>lab9 due</font></strike> -->
+        </td>
+      </tr>
+
+
+      <tr>
+        <td align=center colspan="5">No Class (Patriot's Day)</td>
+      </tr>
+
+
+      <tr>
+        <td rowspan=5 style="vertical-align:middle;text-align:center;">AI for Science<br/></td>
+        <td>Tue, Apr. 16</td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Towards Efficient and High-Quality 3D Generation</span>
+            <!-- <a href="https://www.dropbox.com/s/n78x8gily30e7re/lec27-video-tracking.pdf?dl=0">Lec. 27: Object Tracking</a> -->
+          <div class="subtopic">
+            Guest Speaker: <a href="https://vivianszf.github.io/" target="_blank" style="color: #2EA9DF;">Zifan Shi</a> (Stanford / HKUST)<br>
+            <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=95121325273" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=95121325273</p></a> -->
+          </div>
+        </td>
+        <td>
+          <p style="font-size: 12px;">Abstract: 3D generation has received growing attention due to its potential in modeling the 3D visual world. Despite remarkable advancements, there remains a significant journey ahead. In this talk, we will explore three key aspects of 3D generation. Firstly, we will focus on geometry quality, delving into the design of the discriminator. This crucial component has often been overlooked in many existing 3D generative approaches. Secondly, we will examine the realm of animatable human generation, probing into techniques and challenges associated with this dynamic aspect of 3D modeling. Lastly, we will discuss strategies for constructing a foundational model tailored for 3D generation, aiming to provide a robust framework for further advancements in the field. </p></br>
+
+          <p style="font-size: 15px;">Reference Papers: <br>
+            <a href="https://vivianszf.github.io/geod/" target="_blank" style="color: #2EA9DF;">[Improving 3D-aware Image Synthesis with A Geometry-aware Discriminator]</a>,<br> 
+            <a href="https://vivianszf.github.io/pof3d/" target="_blank" style="color: #2EA9DF;">[Learning 3D-aware Image Synthesis with Unknown Pose Distribution]</a>,<br> 
+            <a href="https://rameenabdal.github.io/GaussianShellMaps/" target="_blank" style="color: #2EA9DF;">[Gaussian Shell Maps for Efficient 3D Human Generation]</a>,<br>
+            <a href="https://justimyhxu.github.io/projects/grm/" target="_blank" style="color: #2EA9DF;">[GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation]</a>,<br>
+            <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank" style="color: #2EA9DF;">[3D Gaussian Splatting for Real-Time Radiance Field Rendering (Siggraph 2023 Best Paper)]</a>.<br></p>
+
+        </td>
+
+        <td>
+            <!-- <font color=#800000>ps4 due</font> -->
+        </td>
+      </tr>
+
+
+      <tr>
+        <!-- <td rowspan=4 style="vertical-align:middle;text-align:center;">AI for Science<br/></td> -->
+        <td>Wed, Apr. 17</td>
+        <td class="topic">
+          <span style="color: #33A6B8;">CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society</span>
+          <!-- Lecture 28: Intelligent Health Monitoring in the Home -->
+          <!-- Lecture 29: AI for Disease and Medicine -->
+          <div class="subtopic">
+            Guest Speaker: <a href="https://ghli.org/" target="_blank" style="color: #2EA9DF;">Guohao Li</a> (University of Oxford)<br>
+
+            <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=93404995819" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=93404995819</p></a> -->
+          </div>
+        </td>
+        <td>
+
+          <p style="font-size: 12px;">Abstract: The rapid advancement of chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents, and provides insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of a society of agents, providing a valuable resource for investigating conversational language models. In particular, we conduct comprehensive studies on instruction-following cooperation in multi-agent settings.</p>
+
+          <p style="font-size: 15px;">Reference Papers: <br>
+            <a href="https://arxiv.org/pdf/2303.17760.pdf" target="_blank" style="color: #2EA9DF;">[CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society]</a>,<br> 
+            <a href="https://www.camel-ai.org/" target="_blank" style="color: #2EA9DF;">[https://www.camel-ai.org/]</p>
+
+        </td>
+
+        <td>
+            <!-- <font color=#800000>ps4 due</font> -->
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td>Fri, Apr. 19</td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Segment Anything</span>
+        <!-- Guest Speaker: Weather Forcasting -->
+        <div class="subtopic">
+            Guest Speaker: <a href="https://hanzimao.me/" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a> (Nvidia Deep Imagination Research) <br>
+
+            <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92572173772" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92572173772</p></a> -->
+
+            <b>Time:</b> 1:00 PM - 2:00 PM (Eastern Time), 10:00 AM - 11:00 AM (Pacific Time)
+        </div>
+        <td>
+          <p style="font-size: 12px;">Abstract: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation. Using our efficient model in a data collection loop, we built the largest segmentation dataset to date (by far), with over 1 billion masks on 11M licensed and privacy respecting images. The model is designed and trained to be promptable, so it can transfer zero-shot to new image distributions and tasks. We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results. We are releasing the Segment Anything Model (SAM) and corresponding dataset (SA-1B) of 1B masks and 11M images at <a href="https://segment-anything.com" target="_blank" style="color: #2EA9DF;">https://segment-anything.com</a> to foster research into foundation models for computer vision. </p></br>
+
+          <p style="font-size: 15px;">Reference Papers: <a href="https://segment-anything.com/" target="_blank" style="color: #2EA9DF;">[Segment Anything (ICCV 2023 Best Honorable Mention Paper)]</a></p>
+
+        </td>
+        <td>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mon, Apr. 22</td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Respiration Intelligence: Know Your Health from Your Breathing with an AI Assistant</span>
+          <!-- Presentation I -->
+          <div class="subtopic">
+            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank" style="color: #2EA9DF;">Hao He</a> (MIT CSAIL) <br>
+
+            <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=98130504935" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=98130504935</p></a> -->
+
+          </div>
+        </td>
+        <td>
+          <p style="font-size: 12px;">Abstract: Respiration is a fundamental life-sustaining function intricately connected to various aspects of human health. With the aid of AI, we can uncover associations between respiration and numerous health conditions. In this lecture, we'll introduce three case studies demonstrating the use of breathing signals to predict blood oxygen saturation, sleep stages, and inflammation. We'll discuss the accuracy and practical applications of these predictive systems, as well as the core AI technologies that power them. </p></br>
+        </td>
+        <!-- <td><font color=#800000>fp slide due</font> -->
+        </td>
+      </tr>
+
+      <tr>
+        <td>Wed, Apr. 24</td>
+        <td class="topic">
+          <!-- AI for Healthcare -->
+          <span style="color: #33A6B8;">Learning from Synthetic data from LLMs and Diffusion Models</span>
+          <div class="subtopic">
+            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank" style="color: #2EA9DF;">Lijie Fan</a> (MIT CSAIL)
+          </div>
+        </td>
+        <td></td><td></td>
+      </tr>
+      <tr>
+        <td rowspan=4 style="vertical-align:middle;text-align:center;">Final Projects<br/></td>
+        <td>Fri, Apr. 26</td>
+        <td class="topic">Final Project Presentation (1) 
+          <div class="subtopic"></div>
+        </td>
+        <td></td><td></td>
+
+      <tr>
+        <td>Mon, Apr. 29</td>
+        <td class="topic">Final Project Presentation (2) 
+          <div class="subtopic"></div>
+        </td>
+        <td></td><td></td>
+      </tr>
+
+      <tr>
+        <td>Wed, May. 1</td>
+        <td class="topic">Final Project Presentation (3) 
+          <div class="subtopic"></div>
+        </td>
+        <td></td><td></td>
+      </tr>
+
+      </tr>
+      <tr class="gray">
+        <td>Mon, May. 12</td>
+        <td></td>
+        <td></td><td><font color=#800000>Final project report/code due</font></td>
+      </tr>
+    </tbody>
+</table>
+<!-- End schedule -->
+                    </font>
+                  </div>
+              </center>
+            </section>
+            <br><br>
+            <section id="info" class="main">
+              <center>
+                <header class="major">
+                  <h2>Office Hours</h2>
+                </header>
+<!--                   <br>
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <div class="staff">
+                            <div><img src="../shared/Yuan.jpg" class="staff"></div>
+                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Yuan Yuan</a></b></div>
+                            <div>Instructor</div>
+                          </div>
+                        </td>                        
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/gavin.jpg" class="staff"></div>
+                            <div><b><a href="https://ritengzhang.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Gavin</a></b></div>
+                            <div>Teaching Assistant</div>
+                          </div>
+                        </td>
+
+                      </tr>
+                    </tbody></table>
+                </div>
+              </center> -->
+
+              <center>
+                <!-- <br><b>Office Hours</b><br><br> -->                
+               <div class="table-wrapper" style="width:90%">
+                   <table class="alt" style="width:60%">
+                     <thead>
+                       <tr>
+                         <th style="text-align:center">Name</th>
+                         <th style="text-align:center">Office hours</th>
+                     </tr></thead>
+                     <tr class="alternate"><td>Yuan  </td><td>Mon/Tue 3-4pm @ 245 Beacon Rm. 528E</td></tr> 
+                     <tr class="alternate"><td>Gavin </td><td>M W F 10-11am @ CS Lab</td></tr>
+                   </tbody></table>
+                    <div align="left" style="padding-left: 4%; margin-top: -30px">
+                    <ul>
+                        <li>Office hours will take place in person (or Zoom if needed).</li>
+                        <li>Yuan will hold additional one-on-one AMA office hours Tue 4-5pm/Wed 3-4pm <a href="https://calendly.com/yyuanad/open-office-hour" target="_blank" style="color: #2EA9DF;">(15-min by appointment)</a></li>
+                    </ul>
+                    </div>
+                 <br><br>
+               </div>
+      </center></section>
+
+
+      <!-- Guest Speaker -->
+<!--             <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Guest Speakers</h2>
+                </header>
+                  <br>
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/ChunyuanLi.jpg" class="staff"></div>
+                            <div><b><a href="https://chunyuan.li/" class="stafflink" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a></b></div>
+                            <div>Microsoft Research</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/TianhongLi.jpg" class="staff"></div>
+                            <div><b><a href="https://www.tianhongli.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Tianhong Li</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GeYang.jpg" class="staff"></div>
+                            <div><b><a href="https://www.episodeyang.com/" class="stafflink" target="_blank" style="color: #2EA9DF;">Ge Yang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/Zifan_SHI.jpg" class="staff"></div>
+                            <div><b><a href="https://vivianszf.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Zifan Shi</a></b></div>
+                            <div>Stanford / HKUST</div>
+                          </div>
+                        </td> 
+
+
+                        </tr>
+
+                        <tr>
+
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GuohaoLi.jpg" class="staff"></div>
+                            <div><b><a href="https://ghli.org/" class="stafflink" target="_blank" style="color: #2EA9DF;">Guohao Li</a></b></div>
+                            <div>University of Oxford</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/HanziMao.png" class="staff"></div>
+                            <div><b><a href="https://hanzimao.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a></b></div>
+                            <div>Nvidia Research</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/haohemit.jpg" class="staff"></div>
+                            <div><b><a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" class="stafflink" target="_blank" style="color: #2EA9DF;">Hao He</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/LijieFan.jpeg" class="staff"></div>
+                            <div><b><a href="http://lijiefan.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lijie Fan</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        
+                      </tr>
+                    </tbody></table>
+
+                </div>
+              </center>
+            </section> -->
+
+            
+            <!-- Introduction -->
+            <section id="info" class="main">
+              <center>
+                <header class="major">
+                  <h2>Course Information</h2>
+                </header>
+
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+
+                          This is a challenging course and we are here to help you become a more-AI version of yourself.
+                          Please feel free to reach out if you need help in any form.
+                          <br/>
+                        <p><b>1. Get help</b> (besides office hours)</p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        <ul>
+                            <li><b>Dropbox:</b> The lecture pdfs will be uploaded to Dropbox (follow the link) and you can ask questions there by making comments on the slides directly. 
+                                <li><b>Discord:</b> For labs/psets/final projects, we will create dedicated channels for you to ask public questions. 
+                                If you cannot make your post public (e.g., due to
+                    revealing problem set solutions), please directly DM TAs or the instructor separately,
+                    or come to office
+                    hours. Please note, however, that the course staff
+                    cannot provide help debugging code, and there is
+                    no guarantee that they'll be able to answer
+                    last-minute homework questions before the
+                    deadline. We also appreciate it when you respond
+                    to questions from other students! If you have an
+                    important question that you would prefer to discuss
+                    over email, you may email the course staff, 
+                    or you can contact the instructor by email
+                    directly.</li>
+                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html" style="color: #2EA9DF;">university counseling services center</a> provides
+                     a variety of programs and activities.
+                    </li>
+                    <li>
+                        <b>Accommodations for students with disabilities:</b>
+                        If you are a student with a documented disability seeking reasonable accommodations in this course, please contact Kathy Duggan, (617) 552-8093, <a href="mailto:dugganka@bc.edu" style="color: #2EA9DF;">dugganka@bc.edu</a>, at the Connors Family Learning Center regarding learning disabilities and ADHD, or Rory Stein, (617) 552-3470, <a href="mailto:steinr@bc.edu" style="color: #2EA9DF;">steinr@bc.edu</a>, in the Disability Services Office regarding all other types of disabilities, including temporary disabilities. Advance notice and appropriate documentation are required for accommodations.
+                        </li>
+
+                        </ul>
+                    </div>
+                    <br/>
+
+
+                    <p><b>2. Homework submission</b></p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        All programming assignments are in Python on Colab, always due at
+                    <b><font color=#800000>midnight (11:59 pm) on the due date</font></b>. 
+                      <ul>
+                        <li><b>Install Colab on the browser:</b> 
+                            Sign in to your Google account, follow the "Link" (to be updated)
+                            <!-- <a href="https://drive.google.com/drive/folders/1iZcw9dK6DSmKxAsErCZW3tSr479yAPFF?usp=share_link">[link]</a>  -->
+                            to the folder of assignments, click on <i>lab0.ipynb</i>, click on "Open with" and "Connect more apps", install "Colaboratory".
+                        <li><b>Submission:</b>
+                            You need save a copy of the file in your own Google drive, so that you can save your edits. Afterwards, you can download the ipynb file and submit it to <b>Canvas</b>.</li> 
+                        <!-- <li><b>Lab (1 per week):</b> 
+                    Every lecture has a lab exercise to help you gain the hands-on understanding about the material. The lab on previous week's lectures is due <i>on Wednesday</i>.
+                    We will go through some code in class and you need to finish up the exercises.
+                        </li>
+                        
+                        <li><b>Pset (4 in total):</b> 
+                    In each pset, we will build a working prototype for a biology lab or a healthcare startup.
+                        </li> -->
+
+                        <li><b>Final project:</b> 
+                          <!-- <a href="https://docs.google.com/document/d/1Ii08EZK-BtAc4QvtNgWSHsi8cW1kUDJfmUltuvxVkH8/edit#">(guideline)</a>  -->
+                          In lieu of a final exam,
+                    we'll have a final project. This project will be
+                    completed in small groups during the last weeks of
+                    the class. The direction for this project is
+                    open-ended: you can either choose from a list of
+                    project ideas that we distribute, or you can
+                    propose a topic of your own. A short project
+                    proposal will be due approximately halfway through
+                    the course.  During the final exam period, you'll
+                    turn in a final report and give a short
+                    presentation. You may use an ongoing research work
+                    for your final project, as long it meets the
+                    requirements.</li>                      
+                        </ul>
+                    </div>
+                    <br/>
+                    
+                    <p><b>3. Academic policy</b></p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        <ul>
+                        <li><b>Late days:</b> You'll have <b> 4 late
+                        days each</b> for labs and psets respectively
+                        over the course of the
+                        semester. Each time you use one, you may
+                        submit a homework assignment one day late
+                        without penalty. You are allowed to use
+                        multiple late days on a single assignment. For
+                        example, you can use all of your days at once
+                        to turn in one assignment a week late. You
+                        do <i>not</i> need to notify us when you use a
+                        late day; we'll deduct it automatically. If
+                        you run out of late days and still submit
+                        late, your assignment will be penalized at a
+                        rate of 10% per day. If you edit your
+                        assignment after the deadline, this will count
+                        as a late submission, and we'll use the
+                        revision time as the date of submission (after
+                        a short grace period of a few minutes). We
+                        will not provide additional late time, except
+                        under exceptional circumstances, and for these
+                        we'll require documentation (e.g., a doctor's
+                        note). Please note that the late days are
+                        provided to help you deal with minor setbacks,
+                        such as routine illness or injury, paper
+                        deadlines, interviews, and computer problems;
+                        these do not generally qualify for an
+                        additional extension.</li>
+                    <li><b>Academic integrity:</b> While you are
+                       encouraged to discuss homework
+                      assignments with other students, <i>your
+                        programming work must be completed
+                        individually</i>. You may not search for
+                      solutions online, or to use existing
+                      implementations of the algorithms in the
+                      assignments. Thus it is acceptable to learn from another student the general idea for writing program code to perform a particular task, or the technique for solving a mathematical problem, but unacceptable for two students to prepare their assignments together and submit what are essentially two copies of identical work. If you have any uncertainty about the application of this policy, please check with me.
+                      Failure to comply with these guidelines 
+                      will be considered a violation of the 
+                      <a href="https://www.bc.edu/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies" style="color: #2EA9DF;">University policies on academic integrity</a>. 
+                      Please make sure that you are familiar with these policies. 
+                      We will use <b><a href="https://moss.pl/">moss.pl</a></b> tool to check each lab and pset for plagriasm detection.
+                    </li>
+
+                    <li><b>AI assistants policy:</b> 
+                      <ul style="margin-left: 30px;margin-top: 0px">
+                      <li>Our policy for using ChatGPT and other AI assistants is identical to our policy for using human assistants.</li>
+                      <li>This is a deep learning class and you should try out all the latest AI assistants (they are pretty much all using deep learning). It's very important to play with them to learn what they can do and what they can't do. That's a part of the content of this course.</li>
+                      <li>Just like you can come to office hours and ask a human questions (about the lecture material, clarifications about pset questions, tips for getting started, etc), you are very welcome to do the same with AI assistants.</li>
+                      <li>But: just like you are not allowed to ask an expert friend to do your homework for you, you also should not ask an expert AI.</li>
+                      <li>If it is ever unclear, just imagine the AI as a human and apply the same norm as you would with a human.</li>
+                    </ul>
+                    </li>
+
+                    </ul>
+                    </div>
+                    <br/>
+
+
+ 
+
+                                        
+                    <b>4. Related Classes / Online Resources</b>
+                      <div style="padding-left: 4%; margin-top: 0px">
+                        <ul style="padding-left: 4%;">
+                          <li><a href="https://phillipi.github.io/6.s898/" target="_blank" style="color: #2EA9DF;">6.S898 Deep Learning, MIT EECS</a></li>
+                          <li><a href="http://cs231n.stanford.edu/" target="_blank" style="color: #2EA9DF;">CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
+                          <li><a href="https://deeplearning.cs.cmu.edu/S24/index.html" target="_blank" style="color: #2EA9DF;">Deep Learning, CMU</a></li>
+                          <li><a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" target="_blank" style="color: #2EA9DF;">Machine Learning, Oxford</a></li>
+                          <li><a href="https://www.youtube.com/user/GoogleTechTalks/deep_learning_nyu_spring_2014" target="_blank" style="color: #2EA9DF;">Deep Learning, New York University</a></li>
+                          <li><a href="https://www.cs.umd.edu/~djacobs/CMSC828DeepLearning/Syllabus.htm" target="_blank" style="color: #2EA9DF;">Deep Learning, University of Maryland</a></li>
+                          <li><a href="https://sites.cc.gatech.edu/classes/AY2024/cs7643_fall/" target="_blank" style="color: #2EA9DF;">Deep Learning, Georgia Tech</a></li>
+
+
+
+
+                            
+                        </ul>
+                    </div>
+                    <br/>
+               
+                    <b>Acknowledgements:</b> This course draws
+                       heavily from MIT's <a href="http://6.869.csail.mit.edu/fa14/">6.869:
+                       Advances in Computer Vision</a> by Antonio
+                       Torralba, William Freeman, and Phillip
+                       Isola, and from Stanford's <a href="http://cs231n.stanford.edu/schedule.html">CS231n: Deep Learning for Computer Vision</a> by Fei-Fei Li. It also includes lecture slides from
+                       other researchers, including <a href="https://andrewowens.com/">Andrew Owens
+                       </a>, <a href="http://slazebni.cs.illinois.edu/">Svetlana
+                       Lazebnik</a>, <a href="https://people.eecs.berkeley.edu/~efros/">Alexei
+                       Efros</a>,  <a href="https://profiles.stanford.edu/fei-fei-li">Fei-fei
+                       Li</a>,  <a href="https://www.cs.columbia.edu/~vondrick/">Carl
+                       Vondrick</a>,  <a href="https://web.eecs.umich.edu/~fouhey/">David
+                       Fouhey</a>, <a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>, and <a href="http://www.cs.cornell.edu/~snavely">Noah
+                       Snavely</a>, <a href="http://introtodeeplearning.com/">David
+                       Fouhey and Ava Amini</a>. 
+                   Special thanks to <a href="http://www.wanghao.in/index.html">Hao Wang</a> for the insightful and generous advice.
+                    </div>
+              </div></center>
+            </section>
+
+          <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright"><font size="-1">© 2024
+              Boston College. Website based on a template
+              from <a href="https://html5up.net/">HTML5
+                  Up</a>, Andrew Owen's <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/">course</a> at U. Michigan, and Donglai Wei's <a href="https://bc-cv.github.io/csci3343/f22/">course</a> at Boston College.
+          </font></p></footer><font size="-1">
+      </font></section></div><font size="-1">
+
+      <script src="../shared/jquery.min.js"></script>
+      <script src="../shared/jquery.scrollex.min.js"></script>
+      <script src="../shared/jquery.scrolly.min.js"></script>
+      <script src="../shared/skel.min.js"></script>
+      <script src="../shared/util.js"></script>
+
+</font></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

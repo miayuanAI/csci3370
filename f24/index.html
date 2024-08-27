@@ -11,7 +11,8 @@
     <style>
         
   a {
-      color: #535353;
+/*      color: #2EA9DF;*/
+      color: #9F353A;
   }
   a.nounderline { 
       text-decoration: none;
@@ -22,9 +23,10 @@
     
       <div id="wrapper">
         <header id="header" class="alt" style="width: 100%">
-          <div class="bgimg" style="height: 160px; background: #5DAC81">
-            <div style="height: 30px; width: 100%"></div>
-            <h1><font size="+5">CSCI 3370: Deep Learning</font><div style="height:10px"></div>
+          <!-- <div class="bgimg" style="height: 160px; background: #5DAC81" #9F353A #800000> -->
+            <div class="bgimg" style="height: 200px; background: #800000">
+            <div style="height: 40px; width: 100%"></div>
+            <h1><font size="+7">CSCI 3370: Deep Learning</font><div style="height:30px"></div>
               </h1><h2>
                 <font size="+2">
                   Instructor:&nbsp;&nbsp;<a href="https://yyuanad.github.io/" class="nounderline">Yuan Yuan</a>
@@ -72,16 +74,22 @@
                 <div class="spotlight" style="width: 90%; text-align: left">
                     <div class="content">
                     <p>
+                    Deep Learning is rapidly emerging as one of the most successful and widely applicable sets of techniques across a range of domains (vision, language, speech, reasoning, robotics, medicine, science, and AI in general), leading to significant commercial success, transforming people's lives, and opening up exciting new directions that may previously have seemed out of reach.
+                    </p>
 
-                    Over the past few years, Deep Learning has become ubiquitous in our society, with applications spanning search, image understanding, apps, mapping, medicine, drones, self-driving cars, robotics, and art. At the core of many of these applications are visual recognition tasks, such as image classification and object detection. Recent developments in neural network approaches have significantly enhanced the performance of these state-of-the-art visual recognition systems. 
+                    <p style="margin-top: -30px;">
+                    This course will introduce students to the basics of Neural Networks (NNs) and expose them to cutting-edge research. It is structured into modules (Background, Convolutional NNs, NN Training, Sequence Modeling, Self-Supervised Learning, Generative Modeling, and Frontiers). These modules will be delivered through instructor-led lectures and TA-led tutorials, reinforced with assignments that cover both theoretical and practical aspects. The course will also include a project that allows students to explore an area of Deep Learning that interests them in more depth. 
+                    </p>
+
+                    <p style="margin-top: -30px;"> 
+                    At the end of the course, guest speakers will be invited to share the latest research developments in academia and industry, offering valuable insights and broadening students' horizons in this dynamic field. 
+                    </p>
+
+                    
 
 
-                    In the realm of learning algorithms, beyond supervised learning, self-supervised learning has gained widespread use in recent years, particularly in vision and language modeling. This approach enables the extraction of labels for free from unlabeled data, allowing for the training of an unsupervised dataset in a supervised manner. 
-
-
-                    During this course, students will gain foundational knowledge of deep learning algorithms and neural network architectures, as well as practical experience in building, training, and fine-tuning neural networks. They will also gain an understanding of cutting-edge research topics in areas such as vision, language, medicine, generative AI, robotics, and more.
-
-                    <div style="padding-left: 4%; margin-top: -30px">
+                    
+                    <div style="padding-left: 4%; margin-top: -20px">
                     <!-- <div style="padding-left: 4%; margin-top: -30px"> -->
                     <ul>
                         <li><b>Prerequisites:</b> 
@@ -89,10 +97,10 @@
 
 
                                 <ul style="margin-left: 30px;margin-top: 0px">
-                                    <li>Programming: You should be familiar with algorithms and data structures. Familiarity with python or similar frameworks for numeric programming will be helpful but is not strictly required. <a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank" style="color: #2EA9DF;"><i>Python (Basics)</i></a>.</li>
+                                    <li>Programming: You should be familiar with algorithms and data structures. Familiarity with python or similar frameworks for numeric programming will be helpful but is not strictly required. <a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank"><i>Python (Basics)</i></a>.</li>
 
 
-                                    <li>Probability: You should have been exposed to probability distributions, random variables, expectations, etc. <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B" target="_blank" style="color: #2EA9DF;"><i>Linear Algebra (Essence, Chap 1-4)</i></a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank" style="color: #2EA9DF;"><i>Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</i></a>. </li>
+                                    <li>Probability: You should have been exposed to probability distributions, random variables, expectations, etc. <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B" target="_blank"><i>Linear Algebra (Essence, Chap 1-4)</i></a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank"><i>Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</i></a>. </li>
 
 
                                     <li>Machine Learning: Some familiarity with machine learning will be helpful but not required; we will review important concepts that are needed for this course.</li>
@@ -107,12 +115,12 @@
                         <li><b>Textbooks and Materials:</b> <br>
                           There is no required textbook for the course. However, the following books (available for free online) can be useful as references on relevant topics:
                                 <ul style="margin-left: 30px;margin-top: 0px">
-                                    <li><a href="https://www.deeplearningbook.org/" target="_blank" style="color: #2EA9DF;"><i>Deep Learning (DL)</i></a>, Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron, MIT Press, 2016, ISBN: 9780262035613 </li>
-                                    <li><a href="https://d2l.ai/" target="_blank" style="color: #2EA9DF;"><i>Dive into Deep Learning (D2L)</i></a>, Zhang et al.</li>
-                                    <li><a href="https://szeliski.org/Book/" target="_blank" style="color: #2EA9DF;"><i>Computer Vision: Algorithms and Applications 2nd Edition (CV)</i></a>, Richard Szeliski.</li>
-                                    <li><a href="https://github.com/peteflorence/MachineLearning6.867/blob/master/Bishop/Bishop%20-%20Pattern%20Recognition%20and%20Machine%20Learning.pdf" target="_blank" style="color: #2EA9DF;"><i>Pattern Recognition and Machine Learning (PRML)</i></a>, Christopher C. Bishop, Springer, 2006, ISBN: 9780387310732 </li>
+                                    <li><a href="https://www.deeplearningbook.org/" target="_blank"><i>Deep Learning (DL)</i></a>, Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron, MIT Press, 2016, ISBN: 9780262035613 </li>
+                                    <li><a href="https://d2l.ai/" target="_blank"><i>Dive into Deep Learning (D2L)</i></a>, Zhang et al.</li>
+                                    <li><a href="https://szeliski.org/Book/" target="_blank"><i>Computer Vision: Algorithms and Applications 2nd Edition (CV)</i></a>, Richard Szeliski.</li>
+                                    <li><a href="https://github.com/peteflorence/MachineLearning6.867/blob/master/Bishop/Bishop%20-%20Pattern%20Recognition%20and%20Machine%20Learning.pdf" target="_blank"><i>Pattern Recognition and Machine Learning (PRML)</i></a>, Christopher C. Bishop, Springer, 2006, ISBN: 9780387310732 </li>
                                 </ul>
-                                You may also find this tutorial <a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank" style="color: #2EA9DF;"><i>Deep Learning with PyTorch: A 60 Minute Blitz</i></a> helpful.
+                                You may also find this tutorial <a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank"><i>Deep Learning with PyTorch: A 60 Minute Blitz</i></a> helpful.
                          </li>
                          <li><b>Grading Policy:</b> <br>
 
@@ -129,7 +137,7 @@
                           60%: Homework Assigenments (10%*6)
                           30%: Final Project (Proposal, Presentation, and Report) -->
 
-                          You will complete six programming assignments over the course of the semester. All homework assignments will be in Python, and will use <a href="https://pytorch.org/" target="_blank" style="color: #2EA9DF;"><i>PyTorch</i></a> on Google Colab. <br>
+                          You will complete six programming assignments over the course of the semester. All homework assignments will be in Python, and will use <a href="https://pytorch.org/" target="_blank"><i>PyTorch</i></a> on Google Colab. <br>
 
                           Instead of a final exam, at the end of the semester you will complete a project working in groups of at most 3 students. 
                           <!-- The homework assignments walk you through implementing things with extensive starter code; in contrast the project will not provide any starter code whatsoever, leaving you to implement an entire deep learning pipeline from scratch. -->
@@ -165,22 +173,22 @@
                         <td>
                           <div class="staff">
                             <div><img src="../shared/Yuan.jpg" class="staff"></div>
-                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Yuan Yuan</a></b></div>
+                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank">Yuan Yuan</a></b></div>
                             <div>Instructor</div>
                           </div>
                         </td>                        
                         <td>
                           <div class="staff">
                             <div><img src="src/LejunLiaoTemp.jpg" class="staff"></div>
-                            <div><b><a href="https://www.linkedin.com/in/lejun-liao-044470227/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lejun Liao</a></b></div>
+                            <div><b><a href="https://www.linkedin.com/in/lejun-liao-044470227/" class="stafflink" target="_blank">Lejun Liao</a></b></div>
                             <div>Teaching Assistant</div>
                           </div>
                           
                         </td>
                         <td>
                           <div class="staff">
-                            <div><img src="src/blankuser.jpg" class="staff"></div>
-                            <div><b><a href="https://www.linkedin.com/in/yunhan-liu-68759629a/" class="stafflink" target="_blank" style="color: #2EA9DF;">Yunhan Liu</a></b></div>
+                            <div><img src="src/YunhanLiu.jpg" class="staff"></div>
+                            <div><b><a href="https://www.linkedin.com/in/yunhan-liu-68759629a/" class="stafflink" target="_blank">Yunhan Liu</a></b></div>
                             <div>Teaching Assistant</div>
                           </div>
                         </td>
@@ -1195,7 +1203,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
         <!-- Guest Lecture: Large Vision and Language Models -->
           <div class="subtopic">
               <!-- Style transfer and DALL.E -->
-              Guest Speaker: <a href="https://chunyuan.li/" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a> (Microsoft Research) <br>
+              Guest Speaker: <a href="https://chunyuan.li/" target="_blank">Chunyuan Li</a> (Microsoft Research) <br>
 
               <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92229631156" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92229631156</p></a> -->
 
@@ -1206,7 +1214,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <!-- <li><a href="https://chunyuan.li/doc/talk_cvinw_instruction_june2.pdf" target="_blank">[Slides]</a></li> -->
           <p style="font-size: 12px;">Abstract: The future of AI is in creating systems like foundation models that are pre-trained once, and will handle countless many downstream tasks directly (zero-shot), or adapt to new tasks quickly (few-shot). In this talk, I will discuss our vision-language approach to achieving “Computer Vision in the Wild (CVinW)”:  building such a transferable system in computer vision (CV) that can effortlessly generalize to a wide range of visual recognition tasks in the wild. I will first describe the definition and current status of CVinW, and briefly summarize our efforts on benchmark and modeling. I will dive into Large Language-and-Vision Assistant (LLaVA) and its series, including LLaVA-Med, LLaVA-1.5,  LLaVA-NeXT, LLaVA-Interactive, LLaVA-Plus.  LLaVA family represents the first open-source project to exhibit the GPT-4V level capabilities in image understanding and reasoning. demonstrate a promising path to build customizable large multimodal models that follow humans' intent with an affordable cost.</p>
 
-          <p style="font-size: 15px;">Reference Papers: <a href="https://llava-vl.github.io/" target="_blank" style="color: #2EA9DF;">[LLaVA]</a>, <a href="https://github.com/microsoft/LLaVA-Med" target="_blank" style="color: #2EA9DF;">[LLaVA-Med]</a>, <a href="https://arxiv.org/pdf/2310.03744.pdf" target="_blank" style="color: #2EA9DF;">[LLaVA-1.5]</a>, <a href="https://llava-vl.github.io/blog/2024-01-30-llava-next/" target="_blank" style="color: #2EA9DF;">[LLaVA-NeXT]</a>, <a href="https://llava-vl.github.io/llava-interactive/" target="_blank" style="color: #2EA9DF;">[LLaVA-Interactive]</a>, <a href="https://llava-vl.github.io/llava-plus/" target="_blank" style="color: #2EA9DF;">[LLaVA-Plus]</a>.</p>
+          <p style="font-size: 15px;">Reference Papers: <a href="https://llava-vl.github.io/" target="_blank">[LLaVA]</a>, <a href="https://github.com/microsoft/LLaVA-Med" target="_blank">[LLaVA-Med]</a>, <a href="https://arxiv.org/pdf/2310.03744.pdf" target="_blank">[LLaVA-1.5]</a>, <a href="https://llava-vl.github.io/blog/2024-01-30-llava-next/" target="_blank">[LLaVA-NeXT]</a>, <a href="https://llava-vl.github.io/llava-interactive/" target="_blank">[LLaVA-Interactive]</a>, <a href="https://llava-vl.github.io/llava-plus/" target="_blank">[LLaVA-Plus]</a>.</p>
 
           
           
@@ -1221,7 +1229,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <span style="color: #33A6B8;">Learning to and from Predict in Computer Vision</span>
 
           <div class="subtopic">
-                      Guest Speaker: <a href="https://www.tianhongli.me/" target="_blank" style="color: #2EA9DF;">Tianhong Li</a> (MIT CSAIL) </br>
+                      Guest Speaker: <a href="https://www.tianhongli.me/" target="_blank">Tianhong Li</a> (MIT CSAIL) </br>
 
                       <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=96757046427" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=96757046427</p></a> -->
           </div>
@@ -1229,7 +1237,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
         <td>
           <p style="font-size: 12px;">Abstract: Predictive learning has been a long-standing topic in computer vision and has gain increased attention recently due to the success of large language models. This lecture will introduce several pivotal studies within this domain. We begin with image inpainting — a technique vital for understanding context and filling missing information. We will then see how predictive learning could facilitate unsupervised representation learning. Finally, we will introduce how can we use predictive learning to generate novel images.</p></br>
 
-          <p style="font-size: 15px;">Reference Papers: <a href="https://compvis.github.io/taming-transformers/" target="_blank" style="color: #2EA9DF;">[VQGAN]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.pdf" target="_blank" style="color: #2EA9DF;">[MAE]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf" target="_blank" style="color: #2EA9DF;">[MAGE]</a>.</p>
+          <p style="font-size: 15px;">Reference Papers: <a href="https://compvis.github.io/taming-transformers/" target="_blank">[VQGAN]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2022/papers/He_Masked_Autoencoders_Are_Scalable_Vision_Learners_CVPR_2022_paper.pdf" target="_blank">[MAE]</a>, <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Li_MAGE_MAsked_Generative_Encoder_To_Unify_Representation_Learning_and_Image_CVPR_2023_paper.pdf" target="_blank">[MAGE]</a>.</p>
 
         </td>
         <td>
@@ -1245,13 +1253,13 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <!-- Lecture 24: 3D Vision -->
 
           <div class="subtopic">
-                Guest Speaker: <a href="https://www.episodeyang.com/" target="_blank" style="color: #2EA9DF;">Ge Yang</a> (MIT CSAIL)
+                Guest Speaker: <a href="https://www.episodeyang.com/" target="_blank">Ge Yang</a> (MIT CSAIL)
           </div>
         </td>
         <td>
           <p style="font-size: 12px;">Abstract: Recent developments in Artificial Intelligence have produced a trifecta of new techniques in generative modeling, computer graphics, and representation learning that once combined, will lead to radical changes in robotics. In this talk, we will study robot perception as an ill-defined inverse problem whose goal is to infer knowledge of the environment from noise and partial observability. We will start with Neural Radiance Fields (NeRFs) and study ways to combine them with prior knowledge from Foundation Models that are trained over internet-scale datasets to give robots the ability to know what is where in their surrounding environment. We will then look at the AI debate over priors vs data, and discuss how it is affected by recent results from OpenAI sora, the state-of-the-art AI system for generating videos from text.</p></br>
 
-          <p style="font-size: 15px;">Reference Papers: <a href="https://openai.com/research/clip" target="_blank" style="color: #2EA9DF;">[CLIP]</a>, <a href="https://www.matthewtancik.com/nerf" target="_blank" style="color: #2EA9DF;">[NeRF]</a>, <a href="https://f3rm.github.io/" target="_blank" style="color: #2EA9DF;">[Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation (CoRL 2023 Best Paper)]</a>.</p>
+          <p style="font-size: 15px;">Reference Papers: <a href="https://openai.com/research/clip" target="_blank">[CLIP]</a>, <a href="https://www.matthewtancik.com/nerf" target="_blank">[NeRF]</a>, <a href="https://f3rm.github.io/" target="_blank">[Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation (CoRL 2023 Best Paper)]</a>.</p>
 
         </td>
 
@@ -1268,7 +1276,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <span style="color: #33A6B8;">Towards Efficient and High-Quality 3D Generation</span>
             <!-- <a href="https://www.dropbox.com/s/n78x8gily30e7re/lec27-video-tracking.pdf?dl=0">Lec. 27: Object Tracking</a> -->
           <div class="subtopic">
-            Guest Speaker: <a href="https://vivianszf.github.io/" target="_blank" style="color: #2EA9DF;">Zifan Shi</a> (Stanford / HKUST)<br>
+            Guest Speaker: <a href="https://vivianszf.github.io/" target="_blank">Zifan Shi</a> (Stanford / HKUST)<br>
             <!-- Zoom Link: <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=95121325273" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=95121325273</p></a> -->
           </div>
         </td>
@@ -1276,11 +1284,11 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <p style="font-size: 12px;">Abstract: 3D generation has received growing attention due to its potential in modeling the 3D visual world. Despite remarkable advancements, there remains a significant journey ahead. In this talk, we will explore three key aspects of 3D generation. Firstly, we will focus on geometry quality, delving into the design of the discriminator. This crucial component has often been overlooked in many existing 3D generative approaches. Secondly, we will examine the realm of animatable human generation, probing into techniques and challenges associated with this dynamic aspect of 3D modeling. Lastly, we will discuss strategies for constructing a foundational model tailored for 3D generation, aiming to provide a robust framework for further advancements in the field. </p></br>
 
           <p style="font-size: 15px;">Reference Papers: <br>
-            <a href="https://vivianszf.github.io/geod/" target="_blank" style="color: #2EA9DF;">[Improving 3D-aware Image Synthesis with A Geometry-aware Discriminator]</a>,<br> 
-            <a href="https://vivianszf.github.io/pof3d/" target="_blank" style="color: #2EA9DF;">[Learning 3D-aware Image Synthesis with Unknown Pose Distribution]</a>,<br> 
-            <a href="https://rameenabdal.github.io/GaussianShellMaps/" target="_blank" style="color: #2EA9DF;">[Gaussian Shell Maps for Efficient 3D Human Generation]</a>,<br>
-            <a href="https://justimyhxu.github.io/projects/grm/" target="_blank" style="color: #2EA9DF;">[GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation]</a>,<br>
-            <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank" style="color: #2EA9DF;">[3D Gaussian Splatting for Real-Time Radiance Field Rendering (Siggraph 2023 Best Paper)]</a>.<br></p>
+            <a href="https://vivianszf.github.io/geod/" target="_blank">[Improving 3D-aware Image Synthesis with A Geometry-aware Discriminator]</a>,<br> 
+            <a href="https://vivianszf.github.io/pof3d/" target="_blank">[Learning 3D-aware Image Synthesis with Unknown Pose Distribution]</a>,<br> 
+            <a href="https://rameenabdal.github.io/GaussianShellMaps/" target="_blank">[Gaussian Shell Maps for Efficient 3D Human Generation]</a>,<br>
+            <a href="https://justimyhxu.github.io/projects/grm/" target="_blank">[GRM: Large Gaussian Reconstruction Model for Efficient 3D Reconstruction and Generation]</a>,<br>
+            <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/" target="_blank">[3D Gaussian Splatting for Real-Time Radiance Field Rendering (Siggraph 2023 Best Paper)]</a>.<br></p>
 
         </td>
         <td>
@@ -1301,7 +1309,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <!-- Lecture 28: Intelligent Health Monitoring in the Home -->
           <!-- Lecture 29: AI for Disease and Medicine -->
           <div class="subtopic">
-            Guest Speaker: <a href="https://ghli.org/" target="_blank" style="color: #2EA9DF;">Guohao Li</a> (University of Oxford)<br>
+            Guest Speaker: <a href="https://ghli.org/" target="_blank">Guohao Li</a> (University of Oxford)<br>
 
             <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=93404995819" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=93404995819</p></a> -->
           </div>
@@ -1311,8 +1319,8 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <p style="font-size: 12px;">Abstract: The rapid advancement of chat-based language models has led to remarkable progress in complex task-solving. However, their success heavily relies on human input to guide the conversation, which can be challenging and time-consuming. This paper explores the potential of building scalable techniques to facilitate autonomous cooperation among communicative agents, and provides insight into their "cognitive" processes. To address the challenges of achieving autonomous cooperation, we propose a novel communicative agent framework named role-playing. Our approach involves using inception prompting to guide chat agents toward task completion while maintaining consistency with human intentions. We showcase how role-playing can be used to generate conversational data for studying the behaviors and capabilities of a society of agents, providing a valuable resource for investigating conversational language models. In particular, we conduct comprehensive studies on instruction-following cooperation in multi-agent settings.</p>
 
           <p style="font-size: 15px;">Reference Papers: <br>
-            <a href="https://arxiv.org/pdf/2303.17760.pdf" target="_blank" style="color: #2EA9DF;">[CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society]</a>,<br> 
-            <a href="https://www.camel-ai.org/" target="_blank" style="color: #2EA9DF;">[https://www.camel-ai.org/]</p>
+            <a href="https://arxiv.org/pdf/2303.17760.pdf" target="_blank">[CAMEL: Communicative Agents for “Mind” Exploration of Large Language Model Society]</a>,<br> 
+            <a href="https://www.camel-ai.org/" target="_blank">[https://www.camel-ai.org/]</p>
 
         </td>
 
@@ -1329,16 +1337,16 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <span style="color: #33A6B8;">Segment Anything</span>
         <!-- Guest Speaker: Weather Forcasting -->
         <div class="subtopic">
-            Guest Speaker: <a href="https://hanzimao.me/" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a> (Nvidia Deep Imagination Research) <br>
+            Guest Speaker: <a href="https://hanzimao.me/" target="_blank">Hanzi Mao</a> (Nvidia Deep Imagination Research) <br>
 
             <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92572173772" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=92572173772</p></a> -->
 
             <b>Time:</b> 1:00 PM - 2:00 PM (Eastern Time), 10:00 AM - 11:00 AM (Pacific Time)
         </div>
         <td>
-          <p style="font-size: 12px;">Abstract: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation. Using our efficient model in a data collection loop, we built the largest segmentation dataset to date (by far), with over 1 billion masks on 11M licensed and privacy respecting images. The model is designed and trained to be promptable, so it can transfer zero-shot to new image distributions and tasks. We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results. We are releasing the Segment Anything Model (SAM) and corresponding dataset (SA-1B) of 1B masks and 11M images at <a href="https://segment-anything.com" target="_blank" style="color: #2EA9DF;">https://segment-anything.com</a> to foster research into foundation models for computer vision. </p></br>
+          <p style="font-size: 12px;">Abstract: We introduce the Segment Anything (SA) project: a new task, model, and dataset for image segmentation. Using our efficient model in a data collection loop, we built the largest segmentation dataset to date (by far), with over 1 billion masks on 11M licensed and privacy respecting images. The model is designed and trained to be promptable, so it can transfer zero-shot to new image distributions and tasks. We evaluate its capabilities on numerous tasks and find that its zero-shot performance is impressive – often competitive with or even superior to prior fully supervised results. We are releasing the Segment Anything Model (SAM) and corresponding dataset (SA-1B) of 1B masks and 11M images at <a href="https://segment-anything.com" target="_blank">https://segment-anything.com</a> to foster research into foundation models for computer vision. </p></br>
 
-          <p style="font-size: 15px;">Reference Papers: <a href="https://segment-anything.com/" target="_blank" style="color: #2EA9DF;">[Segment Anything (ICCV 2023 Best Honorable Mention Paper)]</a></p>
+          <p style="font-size: 15px;">Reference Papers: <a href="https://segment-anything.com/" target="_blank">[Segment Anything (ICCV 2023 Best Honorable Mention Paper)]</a></p>
 
         </td>
         <td>
@@ -1351,7 +1359,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <span style="color: #33A6B8;">Respiration Intelligence: Know Your Health from Your Breathing with an AI Assistant</span>
           <!-- Presentation I -->
           <div class="subtopic">
-            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank" style="color: #2EA9DF;">Hao He</a> (MIT CSAIL) <br>
+            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank">Hao He</a> (MIT CSAIL) <br>
 
             <!-- <b>Zoom Link:</b> <a href="https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=98130504935" target="_blank" style="color: #2EA9DF;"><p style="font-size: 12px;">https://mit.zoom.us/j/9470404282?pwd=Wlp4cUFXWWtnaUxXbUpmbmZuS0xndz09&omn=98130504935</p></a> -->
 
@@ -1371,7 +1379,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
           <!-- AI for Healthcare -->
           <span style="color: #33A6B8;">Learning from Synthetic data from LLMs and Diffusion Models</span>
           <div class="subtopic">
-            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank" style="color: #2EA9DF;">Lijie Fan</a> (MIT CSAIL)
+            Guest Speaker: <a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" target="_blank">Lijie Fan</a> (MIT CSAIL)
           </div>
         </td>
         <td></td><td></td>
@@ -1465,7 +1473,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
                          <th style="text-align:center">Name</th>
                          <th style="text-align:center">Office hours</th>
                      </tr></thead>
-                     <tr class="alternate"><td>Yuan  </td><td>TBA @ 245 Beacon Rm. 528E</td></tr> 
+                     <tr class="alternate"><td>Yuan  </td><td>Mon/Tue 3-4PM @ 245 Beacon Rm. 528E</td></tr> 
                      <tr class="alternate"><td>Lejun </td><td>M 5-6, 5-7PM if needed, W 5-6PM @ CS Lab</td></tr>
                      <tr class="alternate"><td>Yunhan </td><td>TW TH 6-7PM @ CS Lab</td></tr>
                    </tbody></table>
@@ -1608,12 +1616,12 @@ Semantic/Instance/Panoptic segmentation </br> -->
                     over email, you may email the course staff, 
                     or you can contact the instructor by email
                     directly.</li>
-                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html" style="color: #2EA9DF;">university counseling services center</a> provides
+                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html">university counseling services center</a> provides
                      a variety of programs and activities.
                     </li>
                     <li>
                         <b>Accommodations for students with disabilities:</b>
-                        If you are a student with a documented disability seeking reasonable accommodations in this course, please contact Kathy Duggan, (617) 552-8093, <a href="mailto:dugganka@bc.edu" style="color: #2EA9DF;">dugganka@bc.edu</a>, at the Connors Family Learning Center regarding learning disabilities and ADHD, or Rory Stein, (617) 552-3470, <a href="mailto:steinr@bc.edu" style="color: #2EA9DF;">steinr@bc.edu</a>, in the Disability Services Office regarding all other types of disabilities, including temporary disabilities. Advance notice and appropriate documentation are required for accommodations.
+                        If you are a student with a documented disability seeking reasonable accommodations in this course, please contact Kathy Duggan, (617) 552-8093, <a href="mailto:dugganka@bc.edu">dugganka@bc.edu</a>, at the Connors Family Learning Center regarding learning disabilities and ADHD, or Rory Stein, (617) 552-3470, <a href="mailto:steinr@bc.edu">steinr@bc.edu</a>, in the Disability Services Office regarding all other types of disabilities, including temporary disabilities. Advance notice and appropriate documentation are required for accommodations.
                         </li>
 
                         </ul>
@@ -1700,7 +1708,7 @@ Semantic/Instance/Panoptic segmentation </br> -->
                       assignments. Thus it is acceptable to learn from another student the general idea for writing program code to perform a particular task, or the technique for solving a mathematical problem, but unacceptable for two students to prepare their assignments together and submit what are essentially two copies of identical work. If you have any uncertainty about the application of this policy, please check with me.
                       Failure to comply with these guidelines 
                       will be considered a violation of the 
-                      <a href="https://www.bc.edu/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies" style="color: #2EA9DF;">University policies on academic integrity</a>. 
+                      <a href="https://www.bc.edu/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies">University policies on academic integrity</a>. 
                       Please make sure that you are familiar with these policies. 
                       We will use <b><a href="https://moss.pl/">moss.pl</a></b> tool to check each lab and pset for plagriasm detection.
                     </li>
@@ -1726,14 +1734,14 @@ Semantic/Instance/Panoptic segmentation </br> -->
                     <b>4. Related Classes / Online Resources</b>
                       <div style="padding-left: 4%; margin-top: 0px">
                         <ul style="padding-left: 4%;">
-                          <li><a href="https://https://miayuanai.github.io/csci3399/s24/" target="_blank" style="color: #2EA9DF;">CSCI 3399: Vision and Learning -- Intro to Deep Learning, BC Spring 2024</a></li>
-                          <li><a href="https://phillipi.github.io/6.s898/" target="_blank" style="color: #2EA9DF;">6.S898 Deep Learning, MIT EECS</a></li>
-                          <li><a href="http://cs231n.stanford.edu/" target="_blank" style="color: #2EA9DF;">CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
-                          <li><a href="https://deeplearning.cs.cmu.edu/S24/index.html" target="_blank" style="color: #2EA9DF;">Deep Learning, CMU</a></li>
-                          <li><a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" target="_blank" style="color: #2EA9DF;">Machine Learning, Oxford</a></li>
-                          <li><a href="https://www.youtube.com/user/GoogleTechTalks/deep_learning_nyu_spring_2014" target="_blank" style="color: #2EA9DF;">Deep Learning, New York University</a></li>
-                          <li><a href="https://www.cs.umd.edu/~djacobs/CMSC828DeepLearning/Syllabus.htm" target="_blank" style="color: #2EA9DF;">Deep Learning, University of Maryland</a></li>
-                          <li><a href="https://sites.cc.gatech.edu/classes/AY2024/cs7643_fall/" target="_blank" style="color: #2EA9DF;">Deep Learning, Georgia Tech</a></li>
+                          <li><a href="https://https://miayuanai.github.io/csci3399/s24/" target="_blank">CSCI 3399: Vision and Learning -- Intro to Deep Learning, BC Spring 2024</a></li>
+                          <li><a href="https://phillipi.github.io/6.s898/" target="_blank">6.S898 Deep Learning, MIT EECS</a></li>
+                          <li><a href="http://cs231n.stanford.edu/" target="_blank">CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
+                          <li><a href="https://deeplearning.cs.cmu.edu/S24/index.html" target="_blank">Deep Learning, CMU</a></li>
+                          <li><a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" target="_blank">Machine Learning, Oxford</a></li>
+                          <li><a href="https://www.youtube.com/user/GoogleTechTalks/deep_learning_nyu_spring_2014" target="_blank">Deep Learning, New York University</a></li>
+                          <li><a href="https://www.cs.umd.edu/~djacobs/CMSC828DeepLearning/Syllabus.htm" target="_blank">Deep Learning, University of Maryland</a></li>
+                          <li><a href="https://sites.cc.gatech.edu/classes/AY2024/cs7643_fall/" target="_blank">Deep Learning, Georgia Tech</a></li>
 
 
 

@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>CSCI 3370: Fall 2025</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../shared/main.css">
+	<script data-dapp-detection="">!function(){let e=!1;function n(){if(!e){const n=document.createElement("meta");n.name="dapp-detected",document.head.appendChild(n),e=!0}}if(window.hasOwnProperty("ethereum")){if(window.__disableDappDetectionInsertion=!0,void 0===window.ethereum)return;n()}else{var t=window.ethereum;Object.defineProperty(window,"ethereum",{configurable:!0,enumerable:!1,set:function(e){window.__disableDappDetectionInsertion||n(),t=e},get:function(){if(!window.__disableDappDetectionInsertion){const e=arguments.callee;e&&e.caller&&e.caller.toString&&-1!==e.caller.toString().indexOf("getOwnPropertyNames")||n()}return t}})}}();</script>
+
+</head>
+	<body data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+    <style>
+        
+  a {
+/*      color: #2EA9DF;*/
+      color: #9F353A;
+  }
+  a.nounderline { 
+      text-decoration: none;
+      decoration: none;
+		  border-bottom: none; 
+  }
+    </style>
+    
+      <div id="wrapper">
+        <header id="header" class="alt" style="width: 100%">
+          <!-- <div class="bgimg" style="height: 160px; background: #5DAC81" #9F353A #800000> -->
+            <div class="bgimg" style="height: 200px; background: #800000">
+            <div style="height: 40px; width: 100%"></div>
+            <h1><font size="+7">CSCI 3370: Deep Learning</font><div style="height:30px"></div>
+              </h1><h2>
+                <font size="+2">
+                  Instructor:&nbsp;&nbsp;<a href="https://yyuanad.github.io/" class="nounderline">Yuan Yuan</a>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  Fall 2025 (T/Th 3:00-4:15 PM)  
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.bc.edu/bc-web/sites/245-beacon-st.html" target="_blank">245 Beacon Street Room 125A</a>
+                </font>
+              </h2>
+          </div>
+				</header>
+
+        <center>
+          <div style="background: #EEEEEE; height: 7px"></div>
+        </center>
+
+        <!-- Nav -->
+            <nav id="nav">
+                <ul>							
+                    <li><a href="#overview" class="inheritcolor">Overview</a></li> <b>·</b>
+                    <li><a href="#staff" class="inheritcolor">Staff</a></li> <b>·</b>
+                    <li><a href="#schedule" class="inheritactive">Schedule</a></li> <b>·</b>
+                    <li><a href="#info" class="inheritcolor">Course info</a></li> <b>·</b>
+                    <li><a href="https://bostoncollege.instructure.com/courses/1659896" class="inheritcolor" target="_blank">Canvas</a></li> 
+                    <!-- <b>·</b> -->
+                    <!-- <li><a href="https://docs.google.com/document/d/1VWzy8Tkhs2QaKBJp37i4wnV9xQXjJttXMUh3TajgxGc/edit?usp=sharing" class="inheritcolor">Discord</a></li> -->
+                </ul>
+            </nav>
+
+
+
+
+
+
+        <!-- Main -->
+            <div id="main">
+            <section id="note" class="main special">
+
+         <!-- Introduction -->
+            <section id="overview" class="main">
+              <center>
+                <header class="major">
+                  <h2>Overview</h2>
+				</header>
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+                    <p>
+                    Deep Learning is rapidly emerging as one of the most successful and widely applicable sets of techniques across a range of domains (vision, language, speech, reasoning, robotics, medicine, science, and AI in general), leading to significant commercial success, transforming people's lives, and opening up exciting new directions that may previously have seemed out of reach.
+                    </p>
+
+                    <p style="margin-top: -30px;">
+                    This course will introduce students to the basics of Neural Networks (NNs) and expose them to cutting-edge research. It is structured into modules (Background, Convolutional NNs, NN Training, Sequence Modeling, Self-Supervised Learning, Generative Modeling, and Frontiers). These modules will be delivered through instructor-led lectures and TA-led tutorials, reinforced with assignments that cover both theoretical and practical aspects. The course will also include a project that allows students to explore an area of Deep Learning that interests them in more depth. 
+                    </p>
+
+                    <p style="margin-top: -30px;"> 
+                    At the end of the course, guest speakers will be invited to share the latest research developments in academia and industry, offering valuable insights and broadening students' horizons in this dynamic field. 
+                    </p>
+
+                    
+
+
+                    
+                    <div style="padding-left: 4%; margin-top: -20px">
+                    <!-- <div style="padding-left: 4%; margin-top: -30px"> -->
+                    <ul>
+                        <li><b>Prerequisites:</b> 
+                          <!-- <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B">Linear Algebra (Essence, Chap 1-4)</a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</a>, and <a href="https://cs231n.github.io/python-numpy-tutorial/">Python (Basics)</a></li> -->
+
+
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li>Programming: You should be familiar with algorithms and data structures. Familiarity with python or similar frameworks for numeric programming will be helpful but is not strictly required. <a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank"><i>Python (Basics)</i></a>.</li>
+
+
+                                    <li>Probability: You should have been exposed to probability distributions, random variables, expectations, etc. <a href="https://www.youtube.com/playlist?list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B" target="_blank"><i>Linear Algebra (Essence, Chap 1-4)</i></a>, <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" target="_blank"><i>Multivariate Calculus (Essence, Chap 1, 3-4, 8-9)</i></a>. </li>
+
+
+                                    <li>Machine Learning: Some familiarity with machine learning will be helpful but not required; we will review important concepts that are needed for this course.</li>
+                                </ul>
+
+                        
+
+
+                        <!-- <li><b>Lecture format</b>: 80% PPT, 10% think-pair-share, 10% live coding.</li> -->
+                        <li><b>Lecture:</b><br>
+                          Lectures will be Monday, Wednesday, and Friday at 245 Beacon St. Room 125A, from 3:00pm to 4:15pm. 
+                        <li><b>Textbooks and Materials:</b> <br>
+                          There is no required textbook for the course. However, the following books (available for free online) can be useful as references on relevant topics:
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li><a href="https://www.deeplearningbook.org/" target="_blank"><i>Deep Learning (DL)</i></a>, Goodfellow, Ian and Bengio, Yoshua and Courville, Aaron, MIT Press, 2016, ISBN: 9780262035613 </li>
+                                    <li><a href="https://d2l.ai/" target="_blank"><i>Dive into Deep Learning (D2L)</i></a>, Zhang et al.</li>
+                                    <li><a href="https://szeliski.org/Book/" target="_blank"><i>Computer Vision: Algorithms and Applications 2nd Edition (CV)</i></a>, Richard Szeliski.</li>
+                                    <li><a href="https://github.com/peteflorence/MachineLearning6.867/blob/master/Bishop/Bishop%20-%20Pattern%20Recognition%20and%20Machine%20Learning.pdf" target="_blank"><i>Pattern Recognition and Machine Learning (PRML)</i></a>, Christopher C. Bishop, Springer, 2006, ISBN: 9780387310732 </li>
+                                </ul>
+                                You may also find this tutorial <a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank"><i>Deep Learning with PyTorch: A 60 Minute Blitz</i></a> helpful.
+                         </li>
+                         <li><b>Grading Policy:</b> <br>
+
+                                <ul style="margin-left: 30px;margin-top: 0px">
+                                    <li>No quizzes/exams.</li>
+                                    <li>10%: Attendance (Including Asking Questions)</li>
+                                    <li>60%: Homework Assigenments (10%*6)</li>
+                                    <li>30%: Final Project (Proposal, Presentation, and Report)</li>
+                                </ul>
+
+                        
+             <!--              No quizzes/exams. <br>
+                          10%: Attendance (Including Asking Questions)
+                          60%: Homework Assigenments (10%*6)
+                          30%: Final Project (Proposal, Presentation, and Report) -->
+
+                          You will complete six programming assignments over the course of the semester. All homework assignments will be in Python, and will use <a href="https://pytorch.org/" target="_blank"><i>PyTorch</i></a> on Google Colab. <br>
+
+                          Instead of a final exam, at the end of the semester you will complete a project working in groups of at most 3 students. 
+                          <!-- The homework assignments walk you through implementing things with extensive starter code; in contrast the project will not provide any starter code whatsoever, leaving you to implement an entire deep learning pipeline from scratch. -->
+
+                          <!-- 10 labs (35%) + 5 psets (35%) + 1 final project (30%). <a href="https://drive.google.com/drive/folders/1LQR9ZyZ7EtOMsvpB1bPRARBVgwQW3OWW">[folder of assignments]</a> </li> -->
+                    </ul>
+                    </div>
+                    </p>         
+                    </div>
+                </div>
+                </center>
+            </section>
+
+
+
+            <!-- Staff -->
+           <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Staff</h2>
+                </header>
+                  <!-- <br> -->
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <div class="staff">
+                            <div><img src="../shared/Yuan.jpg" class="staff"></div>
+                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank">Yuan Yuan</a></b></div>
+                            <div>Instructor</div>
+                          </div>
+                        </td>                        
+                        <td>
+                            <div class="staff">
+                              <div><img src="src/adam.jpg" class="staff"></div>
+                              <div><b><a href="https://akgohain.github.io/gohaina-website/" class="stafflink" target="_blank">Adam Gohain</a></b></div>
+                              <div>Teaching Assistant</div>
+                            </div>
+                          </div>
+                          
+                        </td>
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/xander.jpg" class="staff"></div>
+                            <div><b><a href="https://pickled-land-e1b.notion.site/Hi-I-m-Xander-12316334515780b4b83eeb9baad2b146" class="stafflink" target="_blank">Xander Widener</a></b></div>
+                            <div>Teaching Assistant</div>
+                        </td>
+                      </tr>
+                    </tbody></table>
+
+
+                </div>
+              </center>
+            </section>
+
+      
+
+            <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Guest Speakers</h2>
+                </header>
+                 
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+
+
+                        <!-- <td>
+                          <div class="staff">
+                            <div><img src="src/PaulLiang.jpg" class="staff"></div>
+                            <div><b><a href="https://pliang279.github.io/" class="stafflink" target="_blank">Paul Liang</a></b></div>
+                            <div>MIT Media Lab & EECS</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/YifeiWang.jpg" class="staff"></div>
+                            <div><b><a href="https://yifeiwang77.com/" class="stafflink" target="_blank">Yifei Wang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/haohemit.jpg" class="staff"></div>
+                            <div><b><a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" class="stafflink" target="_blank">Hao He</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/ZhutianYang1.jpg" class="staff"></div>
+                            <div><b><a href="https://zt-yang.com/" class="stafflink" target="_blank">Zhutian Yang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>  -->
+
+
+
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/TianhongLi.jpg" class="staff"></div>
+                            <div><b><a href="https://www.tianhongli.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Tianhong Li</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>  -->
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/GeYang.jpg" class="staff"></div>
+                            <div><b><a href="https://www.episodeyang.com/" class="stafflink" target="_blank" style="color: #2EA9DF;">Ge Yang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> -->
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/Zifan_SHI.jpg" class="staff"></div>
+                            <div><b><a href="https://vivianszf.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Zifan Shi</a></b></div>
+                            <div>Stanford / HKUST</div>
+                          </div>
+                        </td>  -->
+
+
+                        </tr>
+
+                        <tr>
+
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/GuohaoLi.jpg" class="staff"></div>
+                            <div><b><a href="https://ghli.org/" class="stafflink" target="_blank" style="color: #2EA9DF;">Guohao Li</a></b></div>
+                            <div>University of Oxford</div>
+                          </div>
+                        </td>  --> 
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/HanziMao.png" class="staff"></div>
+                            <div><b><a href="https://hanzimao.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a></b></div>
+                            <div>Nvidia Research</div>
+                          </div>
+                        </td>  -->
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/ChunyuanLi.jpg" class="staff"></div>
+                            <div><b><a href="https://chunyuan.li/" class="stafflink" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a></b></div>
+                            <div>Microsoft Research</div>
+                          </div>
+                        </td>   -->
+
+<!--                         <td>
+                          <div class="staff">
+                            <div><img src="src/LijieFan.jpeg" class="staff"></div>
+                            <div><b><a href="http://lijiefan.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lijie Fan</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>  -->
+
+                        
+                      </tr>
+                    </tbody></table>
+
+
+                </div>
+              </center>
+            </section>
+
+          
+
+
+
+                                 <section id="schedule" class="main special">
+              <center>
+                <header class="major">
+                  <h2>Tentative Schedule (subject to changes)</h2>
+                </header>
+                <div style="margin-top: -20px;margin-bottom: 10px;margin-left: 120px;text-align:left;">
+                   <!--  <ul> 
+                        <li><font color=#800000>[R]eading</font>: read through the materials before the lecture.</li>
+                        <li><font color=#800000>[C]oding</font>: coding assignment after the lecture.</li>
+                    </ul>  -->
+                </div>
+                  <div class="table-wrapper" style="width:100%;margin:auto;">
+                    <font style="font-size: 16px">
+                        <table class="alt">
+						  <tbody>
+                          </tbody><colgroup>
+                              <col width="15%">
+                              <col width="32%">
+                              <col width="35%">
+                              <col width="18%">
+                          </colgroup>
+                          <thead>
+                            <tr>
+              <th style="text-align:center"><b>Date</b></th>
+              <th style="text-align:center"><b>Topic</b></th>
+              <th style="text-align:center"><b>Materials</b></th>
+              <th style="text-align:center"><b>Assignments</b></th>
+                            </tr>
+                          </thead>
+                          <style>
+                            ul.materials {
+                                padding-left: 15px;
+                            }
+                            div.subtopic {
+                                font-style: normal;
+                                font-family: HelveticaNeue-Light;
+                                font-weight: 200;
+                            }
+                            td.topic {
+                                font-family: HelveticaNeue;
+                                font-weight: normal;
+                            }
+                            td.topic2 {
+                                font-family: HelveticaNeue;
+                                font-style: italic;
+                                font-weight: 200;
+                            }
+                          </style>
+
+    <!-- Start schedule -->
+    <tbody>
+
+        <!-- <td>Thu, Jan. 16 </td>
+        <td class="topic">Lecture 2: Machine Learning Basics
+          <div class="subtopic">
+              Machine learning overview </br>
+              ML: pipeline, tasks </br>
+              Linear regression, Polynomial regression </br>
+            </div>
+        </td> 
+        <td>
+          <ul class="materials">
+              <li>[T] Chap. 1, [Z] <a href="https://d2l.ai/chapter_introduction/index.html">Chap. 1</a></li>
+              <li><a href="https://www.dropbox.com/scl/fi/fl1cjdot7e2syoisms0x8/L1_Introduction.pdf?rlkey=hcijzcgzr22bd9ivamjwhj0dl&amp;st=pfasjhzg&amp;dl=0" target="_blank">[Slides]</a> </li>
+              <li><a href="https://www.dropbox.com/home/csci3399/s24/slides?preview=Waymo.MOV" target="_blank">[Waymo Demo]</a> </li>
+              <li><a href="https://cs231n.github.io/python-numpy-tutorial/" target="_blank">[Python Tutorial]</a>, 
+              
+              <a href="https://cs231n.github.io/setup-instructions/#working-remotely-on-google-colaboratory">[Colab]</a>
+              <br> </li>
+              <li><a href="https://www.deeplearningbook.org/contents/intro.html" target="_blank">[DL Sec 1.2] </a>,
+              <a href="https://www.deeplearningbook.org/contents/mlp.html" target="_blank">[DL Sec 6.6] </a>
+              <br> </li>
+              <li>AI for <a href="https://www.youtube.com/watch?v=ii-FfE-7C-k">healthcare</a>, <a href="https://www.youtube.com/watch?v=ETq_9YFUQvU">bioimage</a>, <a href="https://www.youtube.com/watch?v=9fAcjfnWyso">medical image</a></li>
+          </ul>
+        </td>
+        <td>
+        </td>
+      </tr>
+
+        
+        -->
+
+
+        <!-- <td>Thu, Mar. 10</td>
+        <td class="topic">
+          <span style="color: #33A6B8;">Towards Test-time Self-supervised Learning (<a href="https://yifeiwang77.com/assets/pdf/TT-SSL-talk-Nov2024.pdf" target="_blank">Slides</a>)</span>
+        <div class="subtopic">
+            <p>Guest Speaker: <a href="https://yifeiwang77.com/" target="_blank">Yifei Wang</a> (MIT CSAIL) <br></p>
+
+            <p style="font-size: 12px;"><b>Bio:</b> Yifei Wang is a postdoc at MIT CSAIL, advised by Prof. Stefanie Jegelka. He earned his bachelor's and Ph.D. degrees from Peking University. His research is focused on bridging the theory and practice of self-supervised learning to advance the scalability and safety of foundation models.  His first-author works have been recognized by 3 best paper awards, including the sole Best ML Paper Award at ECML-PKDD 2021, the Silver Best Paper Award at the ICML 2021 AdvML Workshop, and the Best Paper Award at the ICML 2024 ICL Workshop. Academic page: <a href="https://yifeiwang77.com/" target="_blank">https://yifeiwang77.com</a>.
+        <td>
+          <p style="font-size: 12px;"><b>Abstract:</b> Self-supervised learning (SSL) has been instrumental in unlocking the potential of massive unlabeled datasets, driving the development of foundation models across various domains. However, the benefits from pretraining are diminishing, signaling a plateau in performance gains. To introduce a new dimension for scaling SSL beyond the pretraining stage, we propose the paradigm of test-time self-supervised learning (TT-SSL), which leverages test-time computation to enhance pretrained models without requiring labeled data. We investigate two examples of TT-SSL: (1) unsupervised in-context adaptation, where models adjust to downstream tasks during test time based solely on input context, and (2) self-correction through self-reflection and iterative improvement, allowing models to refine their predictions in real-time without external feedback. This paradigm unlocks the potential of test-time computation for self-exploration and autonomous improvement of model behaviors, offering a promising new direction for advancing the scalability and capabilities of foundation models. </p></br>
+
+        </td> -->
+
+
+    <tr>
+    <td>Tue, Aug. 26</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Aug. 28</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Sep. 2</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+      
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Sep. 4</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+      
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Sep 9</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Sep 11</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Sep 16</td>
+    <td class="topic">
+    <div class="subtopic">
+
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Sep 18</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Sep 23</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Sep 25</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+      <td>Tue, Sep 30</td>
+      <td class="topic">
+      <div class="subtopic">
+      </div>
+      </td>
+      <td>
+      <ul class="materials">
+  
+      </ul>
+      </td>
+      <td>
+      </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Oct 2</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Oct 7</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Oct 9</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Oct 14</td>
+    <td class="topic"> No Class (Happy Fall Break)
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Oct 16</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Oct 21</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Oct 23</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Tue, Oct 28</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Oct 30</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Nov 4</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr> 
+    
+    <tr>
+    <td>Thu, Nov 6</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Nov 11</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Nov 13</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Tue, Nov 18</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Thu, Nov 20</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+
+    <tr>
+    <td>Tue, Nov 25</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Nov 27</td>
+    <td class="topic"> No Class (Happy Thanksgiving)
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Tue, Dec 2</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+    <tr>
+    <td>Thu, Dec 4</td>
+    <td class="topic">
+    <div class="subtopic">
+    </div>
+    </td>
+    <td>
+    <ul class="materials">
+
+    </ul>
+    </td>
+    <td>
+    </td>
+    </tr>
+    
+</tr>
+
+    </tbody>
+</table>
+<!-- End schedule -->
+
+                    </font>
+                  </div>
+              </center>
+            </section>
+            <br><br>
+            <section id="info" class="main">
+              <center>
+                <header class="major">
+                  <h2>Office Hours</h2>
+                </header>
+<!--                   <br>
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+                        <td>
+                          <div class="staff">
+                            <div><img src="../shared/Yuan.jpg" class="staff"></div>
+                            <div><b><a href="https://yyuanad.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Yuan Yuan</a></b></div>
+                            <div>Instructor</div>
+                          </div>
+                        </td>                        
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/gavin.jpg" class="staff"></div>
+                            <div><b><a href="https://ritengzhang.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Gavin</a></b></div>
+                            <div>Teaching Assistant</div>
+                          </div>
+                        </td>
+
+                      </tr>
+                    </tbody></table>
+                </div>
+              </center> -->
+
+              <center>
+                <!-- <br><b>Office Hours</b><br><br> -->                
+               <div class="table-wrapper" style="width:90%">
+                   <table class="alt" style="width:60%">
+                     <thead>
+                       <tr>
+                         <th style="text-align:center">Name</th>
+                         <th style="text-align:center">Office hours</th>
+                     </tr></thead>
+                     <tr class="alternate"><td>Yuan  </td><td>Tu/Th 4:30–5:30PM @ 245 Beacon Rm. 528E</td></tr> 
+                     <tr class="alternate"><td>Adam </td><td>??? @ CS Lab</td></tr>
+                     <tr class="alternate"><td>Xander </td><td>??? @ CS Lab</td></tr>
+                   </tbody></table>
+                    <div align="left" style="padding-left: 4%; margin-top: -30px">
+                    <ul>
+                        <li>Office hours will take place in person (or Zoom if needed).</li>
+                        <!--- <li>Yuan will hold additional one-on-one AMA office hours Tue 4-5pm/Wed 3-4pm <a href="https://calendly.com/yyuanad/open-office-hour" target="_blank" style="color: #2EA9DF;">(15-min by appointment)</a></li> --->
+                    </ul>
+                    </div>
+                 <br><br>
+               </div>
+      </center></section>
+
+
+      <!-- Guest Speaker -->
+<!--             <section id="staff" class="main">
+              <center>
+                <header class="major">
+                  <h2>Guest Speakers</h2>
+                </header>
+                  <br>
+                  <style>
+                    a.stafflink {
+                        text-decoration: none;
+                        decoration: none;
+                        border-bottom: none; 
+                    }
+                  </style>
+                  <div class="table-wrapper" style="width:90%">
+                    <table>
+                      <tbody><tr>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/ChunyuanLi.jpg" class="staff"></div>
+                            <div><b><a href="https://chunyuan.li/" class="stafflink" target="_blank" style="color: #2EA9DF;">Chunyuan Li</a></b></div>
+                            <div>Microsoft Research</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/TianhongLi.jpg" class="staff"></div>
+                            <div><b><a href="https://www.tianhongli.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Tianhong Li</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GeYang.jpg" class="staff"></div>
+                            <div><b><a href="https://www.episodeyang.com/" class="stafflink" target="_blank" style="color: #2EA9DF;">Ge Yang</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/Zifan_SHI.jpg" class="staff"></div>
+                            <div><b><a href="https://vivianszf.github.io/" class="stafflink" target="_blank" style="color: #2EA9DF;">Zifan Shi</a></b></div>
+                            <div>Stanford / HKUST</div>
+                          </div>
+                        </td> 
+
+
+                        </tr>
+
+                        <tr>
+
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/GuohaoLi.jpg" class="staff"></div>
+                            <div><b><a href="https://ghli.org/" class="stafflink" target="_blank" style="color: #2EA9DF;">Guohao Li</a></b></div>
+                            <div>University of Oxford</div>
+                          </div>
+                        </td>  
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/HanziMao.png" class="staff"></div>
+                            <div><b><a href="https://hanzimao.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Hanzi Mao</a></b></div>
+                            <div>Nvidia Research</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/haohemit.jpg" class="staff"></div>
+                            <div><b><a href="https://scholar.google.com/citations?user=v1sUoqwAAAAJ&hl=en" class="stafflink" target="_blank" style="color: #2EA9DF;">Hao He</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        <td>
+                          <div class="staff">
+                            <div><img src="src/LijieFan.jpeg" class="staff"></div>
+                            <div><b><a href="http://lijiefan.me/" class="stafflink" target="_blank" style="color: #2EA9DF;">Lijie Fan</a></b></div>
+                            <div>MIT CSAIL</div>
+                          </div>
+                        </td> 
+
+                        
+                      </tr>
+                    </tbody></table>
+
+                </div>
+              </center>
+            </section> -->
+
+            
+            <!-- Introduction -->
+            <section id="info" class="main">
+              <center>
+                <header class="major">
+                  <h2>Course Information</h2>
+                </header>
+
+                <div class="spotlight" style="width: 90%; text-align: left">
+                    <div class="content">
+
+                          This is a challenging course and we are here to help you become a more-AI version of yourself.
+                          Please feel free to reach out if you need help in any form.
+                          <br/>
+                        <p><b>1. Get help</b> (besides office hours)</p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        <ul>
+                            <li><b>Dropbox:</b> The lecture pdfs will be uploaded to Dropbox (follow the link) and you can ask questions there by making comments on the slides directly. 
+                                <li><b>Discord:</b> For labs/psets/final projects, we will create dedicated channels for you to ask public questions. 
+                                If you cannot make your post public (e.g., due to
+                    revealing problem set solutions), please directly DM TAs or the instructor separately,
+                    or come to office
+                    hours. Please note, however, that the course staff
+                    cannot provide help debugging code, and there is
+                    no guarantee that they'll be able to answer
+                    last-minute homework questions before the
+                    deadline. We also appreciate it when you respond
+                    to questions from other students! If you have an
+                    important question that you would prefer to discuss
+                    over email, you may email the course staff, 
+                    or you can contact the instructor by email
+                    directly.</li>
+                    <li><b>Support:</b> The <a href="https://www.bc.edu/bc-web/offices/student-affairs/sites/counseling.html">university counseling services center</a> provides
+                     a variety of programs and activities.
+                    </li>
+                    <li>
+                        <b>Accommodations for students with disabilities:</b>
+                        If you are a student with a documented disability seeking reasonable accommodations in this course, please contact Kathy Duggan, (617) 552-8093, <a href="mailto:dugganka@bc.edu">dugganka@bc.edu</a>, at the Connors Family Learning Center regarding learning disabilities and ADHD, or Rory Stein, (617) 552-3470, <a href="mailto:steinr@bc.edu">steinr@bc.edu</a>, in the Disability Services Office regarding all other types of disabilities, including temporary disabilities. Advance notice and appropriate documentation are required for accommodations.
+                        </li>
+
+                        </ul>
+                    </div>
+                    <br/>
+
+
+                    <p><b>2. Homework submission</b></p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        All programming assignments are in Python on Colab, always due at
+                    <b><font color=#800000>midnight (11:59 pm) on the due date</font></b>. 
+                      <ul>
+                        <li><b>Install Colab on the browser:</b> 
+                            Sign in to your Google account, follow the "Link" (to be updated)
+                            <!-- <a href="https://drive.google.com/drive/folders/1iZcw9dK6DSmKxAsErCZW3tSr479yAPFF?usp=share_link">[link]</a>  -->
+                            to the folder of assignments, click on <i>lab0.ipynb</i>, click on "Open with" and "Connect more apps", install "Colaboratory".
+                        <li><b>Submission:</b>
+                            You need save a copy of the file in your own Google drive, so that you can save your edits. Afterwards, you can download the ipynb file and submit it to <b>Canvas</b>.</li> 
+                        <!-- <li><b>Lab (1 per week):</b> 
+                    Every lecture has a lab exercise to help you gain the hands-on understanding about the material. The lab on previous week's lectures is due <i>on Wednesday</i>.
+                    We will go through some code in class and you need to finish up the exercises.
+                        </li>
+                        
+                        <li><b>Pset (4 in total):</b> 
+                    In each pset, we will build a working prototype for a biology lab or a healthcare startup.
+                        </li> -->
+
+                        <li><b>Final project:</b> 
+                          <!-- <a href="https://docs.google.com/document/d/1Ii08EZK-BtAc4QvtNgWSHsi8cW1kUDJfmUltuvxVkH8/edit#">(guideline)</a>  -->
+                          In lieu of a final exam,
+                    we'll have a final project. This project will be
+                    completed in small groups during the last weeks of
+                    the class. The direction for this project is
+                    open-ended: you can either choose from a list of
+                    project ideas that we distribute, or you can
+                    propose a topic of your own. A short project
+                    proposal will be due approximately halfway through
+                    the course.  During the final exam period, you'll
+                    turn in a final report and give a short
+                    presentation. You may use an ongoing research work
+                    for your final project, as long it meets the
+                    requirements.</li>                      
+                        </ul>
+                    </div>
+                    <br/>
+                    
+                    <p><b>3. Academic policy</b></p>
+                      <div style="padding-left: 4%; margin-top: -35px">
+                        <ul>
+                        <li><b>Late days:</b> You'll have <b> 1 late
+                        day</b> for every lab and pset respectively
+                        over the course of the
+                        semester. Each time you use one, you may
+                        submit a homework assignment one day late
+                        without penalty. <!---You are allowed to use
+                        multiple late days on a single assignment. For
+                        example, you can use all of your days at once
+                        to turn in one assignment a week late. ---> You
+                        do <i>not</i> need to notify us when you use a
+                        late day; we'll deduct it automatically. If
+                        you run out of late days and still submit
+                        late, your assignment will be penalized at a
+                        rate of 2% per day. If you edit your
+                        assignment after the deadline, this will count
+                        as a late submission, and we'll use the
+                        revision time as the date of submission (after
+                        a short grace period of a few minutes). We
+                        will not provide additional late time, except
+                        under exceptional circumstances, and for these
+                        we'll require documentation (e.g., a doctor's
+                        note). Please note that the late days are
+                        provided to help you deal with minor setbacks,
+                        such as routine illness or injury, paper
+                        deadlines, interviews, and computer problems;
+                        these do not generally qualify for an
+                        additional extension.</li>
+                    <li><b>Academic integrity:</b> While you are
+                       encouraged to discuss homework
+                      assignments with other students, <i>your
+                        programming work must be completed
+                        individually</i>. You may not search for
+                      solutions online, or to use existing
+                      implementations of the algorithms in the
+                      assignments. Thus it is acceptable to learn from another student the general idea for writing program code to perform a particular task, or the technique for solving a mathematical problem, but unacceptable for two students to prepare their assignments together and submit what are essentially two copies of identical work. If you have any uncertainty about the application of this policy, please check with me.
+                      Failure to comply with these guidelines 
+                      will be considered a violation of the 
+                      <a href="https://www.bc.edu/bc-web/academics/sites/university-catalog/policies-procedures.html#academic_integrity_policies">University policies on academic integrity</a>. 
+                      Please make sure that you are familiar with these policies. 
+                      We will use <b><a href="https://moss.pl/">moss.pl</a></b> tool to check each lab and pset for plagriasm detection.
+                    </li>
+
+                    <li><b>AI assistants policy:</b> 
+                      <ul style="margin-left: 30px;margin-top: 0px">
+                      <li>Our policy for using ChatGPT and other AI assistants is identical to our policy for using human assistants.</li>
+                      <li>This is a deep learning class and you should try out all the latest AI assistants (they are pretty much all using deep learning). It's very important to play with them to learn what they can do and what they can't do. That's a part of the content of this course.</li>
+                      <li>Just like you can come to office hours and ask a human questions (about the lecture material, clarifications about pset questions, tips for getting started, etc), you are very welcome to do the same with AI assistants.</li>
+                      <li>But: just like you are not allowed to ask an expert friend to do your homework for you, you also should not ask an expert AI.</li>
+                      <li>If it is ever unclear, just imagine the AI as a human and apply the same norm as you would with a human.</li>
+                    </ul>
+                    </li>
+
+                    </ul>
+                    </div>
+                    <br/>
+
+
+ 
+
+                                        
+                    <b>4. Related Classes / Online Resources</b>
+                      <div style="padding-left: 4%; margin-top: 0px">
+                        <ul style="padding-left: 4%;">
+                          <li><a href="https://https://miayuanai.github.io/csci3399/s24/" target="_blank">CSCI 3399: Vision and Learning -- Intro to Deep Learning, BC Spring 2024</a></li>
+                          <li><a href="https://phillipi.github.io/6.s898/" target="_blank">6.S898 Deep Learning, MIT EECS</a></li>
+                          <li><a href="http://cs231n.stanford.edu/" target="_blank">CS231n Convolutional Neural Networks for Visual Recognition, Stanford</a></li>
+                          <li><a href="https://deeplearning.cs.cmu.edu/S24/index.html" target="_blank">Deep Learning, CMU</a></li>
+                          <li><a href="https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/" target="_blank">Machine Learning, Oxford</a></li>
+                          <li><a href="https://www.youtube.com/user/GoogleTechTalks/deep_learning_nyu_spring_2014" target="_blank">Deep Learning, New York University</a></li>
+                          <li><a href="https://www.cs.umd.edu/~djacobs/CMSC828DeepLearning/Syllabus.htm" target="_blank">Deep Learning, University of Maryland</a></li>
+                          <li><a href="https://sites.cc.gatech.edu/classes/AY2024/cs7643_fall/" target="_blank">Deep Learning, Georgia Tech</a></li>
+
+
+
+
+                            
+                        </ul>
+                    </div>
+                    <br/>
+               
+                    <b>Acknowledgements:</b> This course draws
+                       heavily from MIT's <a href="http://6.869.csail.mit.edu/fa14/">6.869:
+                       Advances in Computer Vision</a> by Antonio
+                       Torralba, William Freeman, and Phillip
+                       Isola, and from Stanford's <a href="http://cs231n.stanford.edu/schedule.html">CS231n: Deep Learning for Computer Vision</a> by Fei-Fei Li. It also includes lecture slides from
+                       other researchers, including <a href="https://andrewowens.com/">Andrew Owens
+                       </a>, <a href="http://slazebni.cs.illinois.edu/">Svetlana
+                       Lazebnik</a>, <a href="https://people.eecs.berkeley.edu/~efros/">Alexei
+                       Efros</a>,  <a href="https://profiles.stanford.edu/fei-fei-li">Fei-fei
+                       Li</a>,  <a href="https://www.cs.columbia.edu/~vondrick/">Carl
+                       Vondrick</a>,  <a href="https://web.eecs.umich.edu/~fouhey/">David
+                       Fouhey</a>, <a href="https://web.eecs.umich.edu/~justincj/">Justin Johnson</a>, and <a href="http://www.cs.cornell.edu/~snavely">Noah
+                       Snavely</a>, <a href="http://introtodeeplearning.com/">David
+                       Fouhey and Ava Amini</a>. 
+                   Special thanks to <a href="http://www.wanghao.in/index.html">Hao Wang</a> for the insightful and generous advice.
+                    </div>
+              </div></center>
+            </section>
+
+          <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright"><font size="-1">© 2025
+              Boston College. Website based on a template
+              from <a href="https://html5up.net/">HTML5
+                  Up</a>, Andrew Owen's <a href="https://www.eecs.umich.edu/courses/eecs442-ahowens/fa20/">course</a> at U. Michigan, and Donglai Wei's <a href="https://bc-cv.github.io/csci3343/f22/">course</a> at Boston College.
+          </font></p></footer><font size="-1">
+      </font></section></div><font size="-1">
+
+      <script src="../shared/jquery.min.js"></script>
+      <script src="../shared/jquery.scrollex.min.js"></script>
+      <script src="../shared/jquery.scrolly.min.js"></script>
+      <script src="../shared/skel.min.js"></script>
+      <script src="../shared/util.js"></script>
+
+</font></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
